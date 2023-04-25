@@ -12,12 +12,12 @@
 /*                                                                                                ###   */
 /*  ################################################################################################    */
 /*                                                                                                      */
-/*  File: recup_label_filename.c                                                                        */
+/*  File: ShowAllChar.c                                                                                 */
 /*                                                                                                      */
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
-/*  Created : 25/04/2023 13:45:19                                                                       */
-/*  Updated : 25/04/2023 14:33:27                                                                       */
+/*  Created : 11/04/2023 16:46:17                                                                       */
+/*  Updated : 25/04/2023 14:47:25                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -26,41 +26,37 @@
 #include "lib/libmaj.h"
 #include "lib/libch.h"
 
-int     main(int    argc, char  **argv)
+int     main()
 {
-    char    *label      =   malloc(sizeof(char) *   50);
-    char    *filename   =   malloc(sizeof(char) *   50);
-
-    if(!label || !filename)
+    for(int a = 0; a < 26; a++)
     {
-        printf("Erreur d'allocution de la memoire");
-        free(label);
-        free(filename);
-        return (1);
+        afficher_min_C((void    *)  &a);
     }
-
-    label[0]    =   '\0';
-    filename[0] =   '\0';
-
-
-    if(argc < 3)
+    
+    for(int b = 0; b < 26; b++)
     {
-        printf("Usage : %s <label> <filename>\n", argv[0]);
-        return (1);
+        afficher_min_A((void    *)  &b);
     }
 
-    if(argv[1])
+    for(int c = 0; c < 26; c++)
     {
-        ft_strcpy(label, argv[1]);
+        afficher_maj_C((void    *)  &c);
+    }
+    
+    for(int d = 0; d < 26; d++)
+    {
+        afficher_maj_A((void    *)  &d);
     }
 
-    if(argv[2])
-    {   
-        ft_strcpy(filename, argv[2]);
+    for(int x = 0; x < 10; x++)
+    {
+        afficher_chiffre_C((Chiffre_C   *)  chiffres_C[x]);
     }
 
-    printf("Label: %s\n", label);
-    printf("Filename: %s\n", filename);
+    for(int y = 0; y < 10; y++)
+    {
+        afficher_chiffre_N((Chiffre_N   *)  chiffres_N[y]);
+    }
 
     return (0);
 }
