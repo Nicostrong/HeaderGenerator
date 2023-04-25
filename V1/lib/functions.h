@@ -37,5 +37,7 @@ void    ft_strcpy               (char   *dest, char *scr);
 
 int     calcul_longueur_ligne   (char   *label);
 
+void    calcul_longueur_header  (char   *label, int longueur_label, int *lenght_header);
+
 #endif
 
