@@ -17,18 +17,18 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:29:51                                                                       */
-/*  Updated : 24/04/2023 16:18:36                                                                       */
+/*  Updated : 25/04/2023 14:21:05                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
 #include "functions.h"
 
-void    ft_putchar              (char c)
+void    ft_putchar              (char   c)
 {
         write(1, &c, sizeof(char));
 }
 
-void ft_putstr(char *str)
+void    ft_putstr(char *str)
 {
         int     i;
 
@@ -41,7 +41,20 @@ void ft_putstr(char *str)
         }
 }
 
-int     calcul_longueur_ligne   (char *label)
+void    ft_strcpy              (char   *dest, char  *src)
+{
+        int     i;
+
+        i   =   0;
+
+        while(src[i] != '\0')
+        {
+            dest[i] =   src[i];
+            i++;
+        }
+}
+
+int     calcul_longueur_ligne   (char   *label)
 {
         char    *p  =   label; 
         while(*p)

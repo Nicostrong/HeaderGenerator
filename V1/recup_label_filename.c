@@ -12,30 +12,55 @@
 /*                                                                                                ###   */
 /*  ################################################################################################    */
 /*                                                                                                      */
-/*  File: functions.h                                                                                   */
+/*  File: recup_label_filename.c                                                                        */
 /*                                                                                                      */
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
-/*  Created : 15/04/2023 13:34:32                                                                       */
-/*  Updated : 25/04/2023 14:21:24                                                                       */
+/*  Created : 25/04/2023 13:45:19                                                                       */
+/*  Updated : 25/04/2023 14:33:27                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
-#ifndef __H_FUNCTIONS_H__
-# define __H_FUNCTIONS_H__
+#include "lib/functions.h"
+#include "lib/libmin.h"
+#include "lib/libmaj.h"
+#include "lib/libch.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
+int     main(int    argc, char  **argv)
+{
+    char    *label      =   malloc(sizeof(char) *   50);
+    char    *filename   =   malloc(sizeof(char) *   50);
 
-void    ft_putchar              (char   c);
+    if(!label || !filename)
+    {
+        printf("Erreur d'allocution de la memoire");
+        free(label);
+        free(filename);
+        return (1);
+    }
 
-void    ft_putstr               (char   *str);
+    label[0]    =   '\0';
+    filename[0] =   '\0';
 
-void    ft_strcpy               (char   *dest, char *scr);
 
-int     calcul_longueur_ligne   (char   *label);
+    if(argc < 3)
+    {
+        printf("Usage : %s <label> <filename>\n", argv[0]);
+        return (1);
+    }
 
-#endif
+    if(argv[1])
+    {
+        ft_strcpy(label, argv[1]);
+    }
 
+    if(argv[2])
+    {   
+        ft_strcpy(filename, argv[2]);
+    }
+
+    printf("Label: %s\n", label);
+    printf("Filename: %s\n", filename);
+
+    return (0);
+}
