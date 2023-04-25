@@ -24,13 +24,13 @@
 Architecture des lettres en minuscules :
 
 W => longueur de caractere => de 8 à 15 //!\\ ajouter le \0 de fin de ligne //!\\
-H => nombre de ligne => 7
+H => nombre de ligne => 12
 
 type	*nom(H/W)
 
 Lettres => a b c d e f g h i j k l m n o p q r s t u v w x y z
 
-Lettre a : (7/8)
+Lettre a : (12/8)
 
   ::::
  :+  +:
@@ -40,7 +40,7 @@ Lettre a : (7/8)
 #+    +#
 ##    ##
 
-Lettre b : (7/8)
+Lettre b : (12/8)
 
 :::::::
 :+    +:
@@ -50,7 +50,7 @@ Lettre b : (7/8)
 #+    +#
 #######
 
-Lettre c : (7/8)
+Lettre c : (12/8)
 
   ::::::
  :+
@@ -60,7 +60,7 @@ Lettre c : (7/8)
  #+
   ###### 
 
-Lettre d : (7/8)
+Lettre d : (12/8)
 
 ::::::
 :+   +:
@@ -70,7 +70,7 @@ Lettre d : (7/8)
 #+   +#
 ######
 
-Lettre e : (7/8)
+Lettre e : (12/8)
 
   ::::::
  :+
@@ -80,7 +80,7 @@ Lettre e : (7/8)
  #+
   ###### 
 
-Lettre f : (7/8)
+Lettre f : (12/8)
 
   ::::::
  :+
@@ -90,7 +90,7 @@ Lettre f : (7/8)
 #+
 ## 
 
-Lettre g : (7/8)
+Lettre g : (12/8)
 
   ::::::
  :+
@@ -100,7 +100,7 @@ Lettre g : (7/8)
  #+  +#
   ####
  
-Lettre h : (7/8)
+Lettre h : (12/8)
 
 ::    ::
 :+    +:
@@ -110,7 +110,7 @@ Lettre h : (7/8)
 #+    +#
 ##    ##
 
-Lettre i : (7/2)
+Lettre i : (12/2)
 
 ::
 
@@ -120,7 +120,7 @@ Lettre i : (7/2)
 #+
 ##
 
-Lettre j : (7/8)
+Lettre j : (12/8)
 
 ::::::::
    :+
@@ -130,7 +130,7 @@ Lettre j : (7/8)
   #+
 ###
 
-Lettre k : (7/8)
+Lettre k : (12/8)
 
 ::    ::
 :+   +:
@@ -140,7 +140,7 @@ Lettre k : (7/8)
 #+   +#
 ##    ##
 
-Lettre l : (7/8)
+Lettre l : (12/8)
 
 ::
 :+
@@ -150,7 +150,7 @@ Lettre l : (7/8)
 #+
 ########
 
-Lettre m : (7/10)
+Lettre m : (12/10)
 
 ::      ::
 :+\\  //+:
@@ -160,7 +160,7 @@ Lettre m : (7/10)
 #+      +#
 ##      ##
 
-Lettre n : (7/10)
+Lettre n : (12/10)
 
 ::      ::
 :+\\    +:
@@ -170,7 +170,7 @@ Lettre n : (7/10)
 #+    \\+#
 ##      ##
 
-Lettre o : (7/8)
+Lettre o : (12/8)
 
  ::::::
 :+    +:
@@ -180,7 +180,7 @@ Lettre o : (7/8)
 #+    +#
  ######
 
-Lettre p : (7/8)
+Lettre p : (12/8)
 
  ::::::
 :+    +:
@@ -190,7 +190,7 @@ Lettre p : (7/8)
 #+ 
 ## 
 
-Lettre q : (7/8)
+Lettre q : (12/8)
 
  ::::::
 :+    +:
@@ -200,7 +200,7 @@ Lettre q : (7/8)
       +#
       ##
 
-Lettre r : (7/8)
+Lettre r : (12/8)
 
  ::::::
 :+    +:
@@ -210,7 +210,7 @@ Lettre r : (7/8)
 #+   +#
 ##    ##
 
-Lettre s : (7/8)
+Lettre s : (12/8)
 
  ::::::
 :+    +:
@@ -220,7 +220,7 @@ Lettre s : (7/8)
 #+   +#
  ######
 
-Lettre t : (7/8)
+Lettre t : (12/8)
 
 ::::::::
    :+
@@ -230,7 +230,7 @@ Lettre t : (7/8)
    #+
    ##
 
-Lettre u : (7/8)
+Lettre u : (12/8)
 
 ::    ::
 :+    +:
@@ -240,7 +240,7 @@ Lettre u : (7/8)
 #+    +#
  ######
 
-Lettre v : (7/8)
+Lettre v : (12/8)
 
 ::    ::
 :+    +:
@@ -250,7 +250,7 @@ Lettre v : (7/8)
   #++#
    ##
 
-Lettre w : (7/15)
+Lettre w : (12/15)
 
 ::  ::   ::  ::
 :+   +: :+   +:
@@ -260,7 +260,7 @@ Lettre w : (7/15)
   #++#   #++#
    ##     ##
 
-Lettre x : (7/8)
+Lettre x : (12/8)
 
 ::    ::
  :+  +:
@@ -270,7 +270,7 @@ Lettre x : (7/8)
  #+  +#
 ##    ##
 
-Lettre y : (7/8)
+Lettre y : (12/8)
 
 ::    ::
  :+  +:
@@ -280,7 +280,7 @@ Lettre y : (7/8)
  #+
 ##
 
-Lettre z : (7/8)
+Lettre z : (12/8)
 
 ::::::::
      :+
