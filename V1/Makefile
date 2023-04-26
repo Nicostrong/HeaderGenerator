@@ -23,6 +23,8 @@
 
 NAME = ShowLabelToASCIIArt
 
+NAME_DEBUG = prog_debug
+
 SRC = ShowLabelToASCIIArt.c lib/functions.c
 
 LIB = -Llib -lmin -lmaj -lch
@@ -33,6 +35,12 @@ all:
 	@clear
 	@echo "Compilation :"
 	gcc -o $(NAME) $(SRC) $(FLAGW) $(LIB)
+
+debug:
+	@clear
+	@echo "Compilation en mode debug"
+	gcc -g -o $(NAME_DEBUG) $(SRC) $(FLAGW) $(LIB)
+	gdb $(NAME_DEBUG)
 
 clean:
 	/bin/rm -f *.o

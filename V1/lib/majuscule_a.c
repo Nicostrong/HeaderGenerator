@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:14:16                                                                       */
-/*  Updated : 25/04/2023 09:43:24                                                                       */
+/*  Updated : 26/04/2023 10:43:30                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -26,7 +26,7 @@
 // le caractere @ indique la prolongation du caractere suivant ou precedent 
 
 const   Majuscule_A     A_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -43,7 +43,7 @@ const   Majuscule_A     A_a =   {
 };
 
 const   Majuscule_A     B_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -60,7 +60,7 @@ const   Majuscule_A     B_a =   {
 };
 
 const   Majuscule_A     C_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -77,7 +77,7 @@ const   Majuscule_A     C_a =   {
 };
 
 const   Majuscule_A     D_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -94,7 +94,7 @@ const   Majuscule_A     D_a =   {
 };
 
 const   Majuscule_A     E_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"EEEEEEE@"},
         {"EE      "},
@@ -111,7 +111,7 @@ const   Majuscule_A     E_a =   {
 };
 
 const   Majuscule_A     F_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"FFFFFFF@"},
         {"FF      "},
@@ -128,7 +128,7 @@ const   Majuscule_A     F_a =   {
 };
 
 const   Majuscule_A     G_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -145,7 +145,7 @@ const   Majuscule_A     G_a =   {
 };
 
 const   Majuscule_A     H_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -162,7 +162,7 @@ const   Majuscule_A     H_a =   {
 };
 
 const   Majuscule_A_i   I_a =   {
-    .caractere  =   7,
+    .caractere  =   6,
     .rows       =   {
         {"      "},
         {"      "},
@@ -179,7 +179,7 @@ const   Majuscule_A_i   I_a =   {
 };
 
 const   Majuscule_A     J_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -196,7 +196,7 @@ const   Majuscule_A     J_a =   {
 };
 
 const   Majuscule_A     K_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -213,7 +213,7 @@ const   Majuscule_A     K_a =   {
 };
 
 const   Majuscule_A     L_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -230,24 +230,24 @@ const   Majuscule_A     L_a =   {
 };
 
 const   Majuscule_A_mn  M_a =   {
-    .caractere  =   11,
+    .caractere  =   12,
     .rows       =   {
-        {"          "},
-        {"          "},
-        {"MM      MM"},
-        {"MM\\\\  //MM"},
-        {"MM \\\\// MM"},
-        {"MM      MM"},
-        {"MM      MM"},
-        {"MM      MM"},
-        {"MM      MM"},
-        {"MM      MM"},
-        {"          "},
-        {"          "}}
+        {"            "},
+        {"            "},
+        {"MM        MM"},
+        {"MM\\      /MM"},
+        {"MM\\\\    //MM"},
+        {"MM \\\\  // MM"},
+        {"MM  \\\\_// MM"},
+        {"MM        MM"},
+        {"MM        MM"},
+        {"MM        MM"},
+        {"            "},
+        {"            "}}
 };
 
 const   Majuscule_A_mn  N_a =   {
-    .caractere  =   13,
+    .caractere  =   12,
     .rows       =   {
         {"            "},
         {"            "},
@@ -264,7 +264,7 @@ const   Majuscule_A_mn  N_a =   {
 };
 
 const   Majuscule_A     O_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -281,7 +281,7 @@ const   Majuscule_A     O_a =   {
 };
 
 const   Majuscule_A     P_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -298,7 +298,7 @@ const   Majuscule_A     P_a =   {
 };
 
 const   Majuscule_A     Q_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -315,7 +315,7 @@ const   Majuscule_A     Q_a =   {
 };
         
 const   Majuscule_A     R_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -332,7 +332,7 @@ const   Majuscule_A     R_a =   {
 };
 
 const   Majuscule_A     S_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {" SSSSSS@"},
         {"SS      "},
@@ -349,7 +349,7 @@ const   Majuscule_A     S_a =   {
 };
 
 const   Majuscule_A     T_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"@TTTTTT@"},
         {"   TT   "},
@@ -366,7 +366,7 @@ const   Majuscule_A     T_a =   {
 };
 
 const   Majuscule_A     U_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -383,7 +383,7 @@ const   Majuscule_A     U_a =   {
 };
 
 const   Majuscule_A     V_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -400,7 +400,7 @@ const   Majuscule_A     V_a =   {
 };
  
 const   Majuscule_A_w   W_a =   {
-    .caractere  =   16,
+    .caractere  =   15,
     .rows       =   {
         {"               "},
         {"               "},
@@ -417,7 +417,7 @@ const   Majuscule_A_w   W_a =   {
 };
 
 const   Majuscule_A     X_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -434,7 +434,7 @@ const   Majuscule_A     X_a =   {
 };
 
 const   Majuscule_A     Y_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -451,7 +451,7 @@ const   Majuscule_A     Y_a =   {
 };
 
 const   Majuscule_A     Z_a =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"@ZZZZZZZ"},
         {"      ZZ"},

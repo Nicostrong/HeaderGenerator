@@ -17,14 +17,14 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:02:56                                                                       */
-/*  Updated : 24/04/2023 15:58:21                                                                       */
+/*  Updated : 26/04/2023 10:45:37                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
 #include "libmin.h"
 
 const   Minuscule_C     a_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -41,7 +41,7 @@ const   Minuscule_C     a_c =   {
 };
 
 const   Minuscule_C     b_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -58,7 +58,7 @@ const   Minuscule_C     b_c =   {
 };
 
 const   Minuscule_C     c_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -75,7 +75,7 @@ const   Minuscule_C     c_c =   {
 };
 
 const   Minuscule_C     d_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -92,7 +92,7 @@ const   Minuscule_C     d_c =   {
 };
 
 const   Minuscule_C     e_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -109,7 +109,7 @@ const   Minuscule_C     e_c =   {
 };
 
 const   Minuscule_C     f_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -126,7 +126,7 @@ const   Minuscule_C     f_c =   {
 };
 
 const   Minuscule_C     g_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -143,7 +143,7 @@ const   Minuscule_C     g_c =   {
 };
 
 const   Minuscule_C     h_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -160,7 +160,7 @@ const   Minuscule_C     h_c =   {
 };
 
 const   Minuscule_C_i   i_c =   {
-    .caractere  =   7,
+    .caractere  =   6,
     .rows       =   {
         {"      "},
         {"      "},
@@ -177,7 +177,7 @@ const   Minuscule_C_i   i_c =   {
 };
 
 const   Minuscule_C     j_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -194,7 +194,7 @@ const   Minuscule_C     j_c =   {
 };
 
 const   Minuscule_C     k_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -211,7 +211,7 @@ const   Minuscule_C     k_c =   {
 };
 
 const   Minuscule_C     l_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -228,7 +228,7 @@ const   Minuscule_C     l_c =   {
 };
 
 const   Minuscule_C_mn  m_c =   {
-    .caractere  =   13,
+    .caractere  =   12,
     .rows       =   {
         {"            "},
         {"            "},
@@ -245,7 +245,7 @@ const   Minuscule_C_mn  m_c =   {
 };
 
 const   Minuscule_C_mn  n_c =   {
-    .caractere  =   13,
+    .caractere  =   12,
     .rows       =   {
         {"            "},
         {"            "},
@@ -262,7 +262,7 @@ const   Minuscule_C_mn  n_c =   {
 };
 
 const   Minuscule_C     o_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -279,7 +279,7 @@ const   Minuscule_C     o_c =   {
 };
 
 const   Minuscule_C     p_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -296,7 +296,7 @@ const   Minuscule_C     p_c =   {
 };
 
 const   Minuscule_C     q_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -313,7 +313,7 @@ const   Minuscule_C     q_c =   {
 };
 
 const   Minuscule_C     r_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -330,7 +330,7 @@ const   Minuscule_C     r_c =   {
 };
 
 const   Minuscule_C     s_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -347,7 +347,7 @@ const   Minuscule_C     s_c =   {
 };
 
 const   Minuscule_C     t_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -364,7 +364,7 @@ const   Minuscule_C     t_c =   {
 };
 
 const   Minuscule_C     u_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -381,7 +381,7 @@ const   Minuscule_C     u_c =   {
 };
 
 const   Minuscule_C     v_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -398,7 +398,7 @@ const   Minuscule_C     v_c =   {
 };
 
 const   Minuscule_C_w   w_c =   {
-    .caractere  =   16,
+    .caractere  =   15,
     .rows       =   {
         {"               "},
         {"               "},
@@ -415,7 +415,7 @@ const   Minuscule_C_w   w_c =   {
 };
 
 const   Minuscule_C     x_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -432,7 +432,7 @@ const   Minuscule_C     x_c =   {
 };
 
 const   Minuscule_C     y_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -449,7 +449,7 @@ const   Minuscule_C     y_c =   {
 };
 
 const   Minuscule_C     z_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},

@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 25/04/2023 15:02:06                                                                       */
-/*  Updated : 25/04/2023 16:32:31                                                                       */
+/*  Updated : 26/04/2023 16:24:45                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -33,18 +33,9 @@ int     main(int    argc, char  **argv)
     int     *longueur_header    =   malloc(sizeof(int)  *   200);
     int     longueur_label;
 
-    if(!label || !filename || !longueur_header)
-    {
-        printf("Erreur d'allocution de la memoire");
-        free(label);
-        free(filename);
-        free(longueur_header);
-        return (1);
-    }
-
-    label[0]        =   '\0';
-    filename[0]     =   '\0';
-    longueur_label  =   0;
+    test_allocation_memoire     (label);
+    test_allocation_memoire     (filename);
+    test_allocation_memoire     (longueur_header);
 
 
     if(argc < 3)
@@ -66,18 +57,32 @@ int     main(int    argc, char  **argv)
     longueur_label  =   calcul_longueur_ligne(label);
     calcul_longueur_header(label, longueur_label, longueur_header);
 
+    char    **banniere          =   calloc(12, sizeof(char *));
+    for(int i = 0; i < 12; i++)
+        banniere[i] =   calloc(sizeof(longueur_header + 1), sizeof(char));
+
+    test_allocation_memoire     (banniere);
+    creer_banniere(label,  &banniere[0], longueur_label);
+
     printf("Label: %s\n", label);
+
     for(int i = 0; i < longueur_label; i++)
     {
         printf("caractere %d : %c\n", i,label[i]);
     }
+
     printf("Nombre de caractere: %d\n", longueur_label);
-    printf("Nombre de caractere du header: %d\n", longueur_header);
+    printf("Nombre de caractere du header: %d\n", *longueur_header);
     printf("Filename: %s\n", filename);
+    printf("Voiçi la bannière :\n");
+    show_banniere(&banniere[0]);
 
     free(label);
     free(filename);
     free(longueur_header);
+    for(int i = 0; i < 12; i++)
+        free(banniere[i]);
+    free(banniere);
 
     return (0);
 }

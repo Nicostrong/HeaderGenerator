@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:14:16                                                                       */
-/*  Updated : 25/04/2023 09:36:53                                                                       */
+/*  Updated : 26/04/2023 10:43:20                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -26,7 +26,7 @@
 // le caractere @ indique la prolongation du caractere suivant ou precedent 
 
 const   Majuscule_C     A_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows   =   {
         {"        "},
         {"        "},
@@ -43,7 +43,7 @@ const   Majuscule_C     A_c =   {
 };
 
 const   Majuscule_C     B_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -60,7 +60,7 @@ const   Majuscule_C     B_c =   {
 };
 
 const   Majuscule_C     C_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -77,7 +77,7 @@ const   Majuscule_C     C_c =   {
 };
 
 const   Majuscule_C     D_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -94,7 +94,7 @@ const   Majuscule_C     D_c =   {
 };
 
 const   Majuscule_C     E_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {":::::::@"},
         {"::      "},
@@ -111,7 +111,7 @@ const   Majuscule_C     E_c =   {
 };
 
 const   Majuscule_C     F_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {":::::::@"},
         {"::      "},
@@ -128,7 +128,7 @@ const   Majuscule_C     F_c =   {
 };
 
 const   Majuscule_C     G_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -145,7 +145,7 @@ const   Majuscule_C     G_c =   {
 };
 
 const   Majuscule_C     H_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -162,7 +162,7 @@ const   Majuscule_C     H_c =   {
 };
 
 const   Majuscule_C_i   I_c =   {
-    .caractere  =   7,
+    .caractere  =   6,
     .rows       =   {
         {"      "},
         {"      "},
@@ -179,7 +179,7 @@ const   Majuscule_C_i   I_c =   {
 };
 
 const   Majuscule_C     J_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -213,7 +213,7 @@ const   Majuscule_C     K_c =   {
 };
 
 const   Majuscule_C     L_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -230,24 +230,24 @@ const   Majuscule_C     L_c =   {
 };
 
 const   Majuscule_C_mn  M_c =   {
-    .caractere  =   11,
+    .caractere  =   12,
     .rows       =   {
-        {"          "},
-        {"          "},
-        {"::      ::"},
-        {"::\\\\  //::"},
-        {":+ \\\\// :+"},
-        {"+:      +:"},
-        {"++      ++"},
-        {"+#      +#"},
-        {"#+      #+"},
-        {"##      ##"},
-        {"          "},
-        {"          "}}
+        {"            "},
+        {"            "},
+        {"::        ::"},
+        {"::\\      /::"},
+        {":+\\\\    //:+"},
+        {"+: \\\\  // +:"},
+        {"++  \\\\_// ++"},
+        {"+#        +#"},
+        {"#+        #+"},
+        {"##        ##"},
+        {"            "},
+        {"            "}}
 };
 
 const   Majuscule_C_mn  N_c =   {
-    .caractere  =   13,
+    .caractere  =   12,
     .rows       =   {
         {"            "},
         {"            "},
@@ -264,7 +264,7 @@ const   Majuscule_C_mn  N_c =   {
 };
 
 const   Majuscule_C     O_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -281,7 +281,7 @@ const   Majuscule_C     O_c =   {
 };
 
 const   Majuscule_C     P_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -298,7 +298,7 @@ const   Majuscule_C     P_c =   {
 };
 
 const   Majuscule_C     Q_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -315,7 +315,7 @@ const   Majuscule_C     Q_c =   {
 };
         
 const   Majuscule_C     R_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -332,7 +332,7 @@ const   Majuscule_C     R_c =   {
 };
 
 const   Majuscule_C     S_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {" ::::::@"},
         {"::      "},
@@ -349,7 +349,7 @@ const   Majuscule_C     S_c =   {
 };
 
 const   Majuscule_C     T_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"@::::::@"},
         {"   ::   "},
@@ -366,7 +366,7 @@ const   Majuscule_C     T_c =   {
 };
 
 const   Majuscule_C     U_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -383,7 +383,7 @@ const   Majuscule_C     U_c =   {
 };
 
 const   Majuscule_C     V_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -400,7 +400,7 @@ const   Majuscule_C     V_c =   {
 };
  
 const   Majuscule_C_w   W_c =   {
-    .caractere  =   16,
+    .caractere  =   15,
     .rows       =   {
         {"               "},
         {"               "},
@@ -417,7 +417,7 @@ const   Majuscule_C_w   W_c =   {
 };
 
 const   Majuscule_C     X_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -434,7 +434,7 @@ const   Majuscule_C     X_c =   {
 };
 
 const   Majuscule_C     Y_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -451,7 +451,7 @@ const   Majuscule_C     Y_c =   {
 };
 
 const   Majuscule_C     Z_c =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"@:::::::"},
         {"      ::"},

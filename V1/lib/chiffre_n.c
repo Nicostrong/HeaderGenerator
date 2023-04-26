@@ -17,14 +17,14 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 17/04/2023 20:46:41                                                                       */
-/*  Updated : 25/04/2023 09:41:38                                                                       */
+/*  Updated : 26/04/2023 10:45:34                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
 #include "libch.h"
 
 const   Chiffre_N   zero_n      =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -41,7 +41,7 @@ const   Chiffre_N   zero_n      =   {
 };
 
 const   Chiffre_N   un_n        =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -58,7 +58,7 @@ const   Chiffre_N   un_n        =   {
 };
 
 const   Chiffre_N   deux_n      =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -75,7 +75,7 @@ const   Chiffre_N   deux_n      =   {
 };
 
 const   Chiffre_N   trois_n     =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -92,7 +92,7 @@ const   Chiffre_N   trois_n     =   {
 };
 
 const   Chiffre_N   quatre_n    =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -109,7 +109,7 @@ const   Chiffre_N   quatre_n    =   {
 };
 
 const   Chiffre_N   cinq_n      =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -126,7 +126,7 @@ const   Chiffre_N   cinq_n      =   {
 };
 
 const   Chiffre_N   six_n       =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -143,7 +143,7 @@ const   Chiffre_N   six_n       =   {
 };
 
 const   Chiffre_N   sept_n      =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -160,7 +160,7 @@ const   Chiffre_N   sept_n      =   {
 };
 
 const   Chiffre_N   huit_n      =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
@@ -177,18 +177,18 @@ const   Chiffre_N   huit_n      =   {
 };
 
 const   Chiffre_N   neuf_n      =   {
-    .caractere  =   9,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},
         {"        "},
-        {" 999999 "},
-        {"99    99"},
-        {"99    99"},
-        {" 999999 "},
-        {"      99"},
-        {"      99"},
-        {" 999999 "},
+        {" 888888 "},
+        {"88    88"},
+        {"88    88"},
+        {" 888888 "},
+        {"      88"},
+        {"      88"},
+        {" 888888 "},
         {"        "},
         {"        "}}
 };
