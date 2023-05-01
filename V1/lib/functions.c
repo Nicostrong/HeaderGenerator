@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:29:51                                                                       */
-/*  Updated : 01/05/2023 16:35:54                                                                       */
+/*  Updated : 01/05/2023 21:01:44                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -107,60 +107,105 @@ void    cal_len_ban                 (char *label, int len_label, int *len_header
         }
 }
 
+void    banniere                    (char **ban, int *len_header)
+{
+        int cursor = 0;
+        int p   =   18;
+
+        for(int i = 0; i < 12; i++)
+        {
+            while((cursor + 1) != (*len_header))
+            {
+                char *y     =   ((Majuscule_C *) majuscules_C[p])->rows[i][0];
+                int z       =   ((Majuscule_C *) majuscules_C[p])->caractere;
+
+                for(int a = 0; a < z; a++)
+                {
+                    add_char(ban, i, cursor, y[a]);
+                    cursor++;
+                }
+                /*
+                add_char(ban, i , cursor, 'F');
+                cursor++;
+                */
+            }
+            add_char(ban, i, *len_header, '\0');
+            cursor = 0;
+        }
+}
 void    creat_ban                   (char *label, char **ban, int len_label, int *len_header)
 {
-        for(int i = 0; i <= 12; i++)
+        int     cursor;
+        int     i;
+        int     j;
+
+        cursor = 0;
+
+        for(i = 0; i < 12; i++)
         {
-            int len_line    =   0;
-
-            for(int j = 0; j < len_label; j++)
+            for(j = 0; j < len_label; j++)
             {
-                if(label[j] == 32)
-                {
-                    add_char(ban, i, len_line, ' ');
-                    len_line++;
-                    add_char(ban, i, len_line, ' ');
-                    len_line++;
-                }
-                else if((label[j] >= 65) && (label[j] <= 90))
-                {
-                    int x       =   label[j] - 65;
-                    char **y    =   ((Majuscule_C *) majuscules_C[x])->rows[i];
-                    int z       =   ((Majuscule_C *) majuscules_C[x])->caractere;
+                int     a;
+                int     x;
+                int     z;
+                char    *y  =   NULL;
+                
+                z       =   0;
 
-                    for(int a = 0; a < z; a++)
-                    {
-                        add_char(ban, i, len_line, *y[a]);
-                        len_line++;
-                    }
-                }
-                else if((label[j] >= 97) && (label[j] <= 122))
+                if(label[j] == ' ')
                 {
-                    int x       =   label[j] - 97;
-                    char **y    =   ((Minuscule_C *) minuscules_C[x])->rows[i];
-                    int z       =   ((Minuscule_C *) minuscules_C[x])->caractere;
-
-                    for(int a = 0; a < z; a++)
-                    {
-                        add_char(ban, i, len_line, *y[a]);
-                        len_line++;
-                    }
-                }
-                else if((label[j] >= 48) && (label[j] <= 57))
-                {
-                    int x       =   label[j] - 48;
-                    char **y    =   ((Chiffre_C *) chiffres_C[x])->rows[i];
-                    int z       =   ((Chiffre_C *) chiffres_C[x])->caractere;
-
-                    for(int a = 0; a < z; a++)
-                    {
-                        add_char(ban, i, len_line, *y[a]);
-                        len_line++;
-                    }
+                    add_char(ban, i, cursor, ' ');
+                    cursor++;
+                    add_char(ban, i, cursor, ' ');
+                    cursor++;
                 }
                 else
                 {
+                    if(label[j] >= 'A' && label[j] <= 'Z')
+                    {
+                        x   =   label[j] - 'A';
+                        y   =   ((Majuscule_C *) majuscules_C[x])->rows[i][0];
+                        z   =   ((Majuscule_C *) majuscules_C[x])->caractere;
+
+                        for(a = 0; a < z; a++)
+                        {
+                            add_char(ban, i, cursor, y[a]);
+                            cursor++;
+                        }
+                    }
+                    else if(label[j] >= 'a' && label[j] <= 'z')
+                    {
+                        x   =   label[j] - 'a';
+                        y   =   ((Minuscule_C *) minuscules_C[x])->rows[i][0];
+                        z   =   ((Minuscule_C *) minuscules_C[x])->caractere;
+
+                        for(a = 0; a < z; a++)
+                        {
+                            add_char(ban, i, cursor, y[a]);
+                            cursor++;
+                        }
+                    }
+                    else if(label[j] >= '0' && label[j] <= '9')
+                    {
+                        x   =   label[j] - '0';
+                        y   =   ((Chiffre_C *) chiffres_C[x])->rows[i][0];
+                        z   =   ((Chiffre_C *) chiffres_C[x])->caractere;
+
+                        for(a = 0; a < z; a++)
+                        {
+                            add_char(ban, i, cursor, y[a]);
+                            cursor++;
+                        }
+                    }
+                    else
+                    {
+                        printf("Erreur de caractere dans le label non pris en charge");
+                    }
+                }
+                if (cursor == *len_header)
+                {
                     add_char(ban, i, *len_header, '\0');
+                    cursor  =   0;
                 }
             }
         }
