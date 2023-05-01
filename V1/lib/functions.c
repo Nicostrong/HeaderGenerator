@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:29:51                                                                       */
-/*  Updated : 26/04/2023 16:24:47                                                                       */
+/*  Updated : 01/05/2023 16:35:54                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -54,116 +54,134 @@ void    ft_strcpy                   (char   *dest, char  *src)
         }
 }
 
-int     calcul_longueur_ligne       (char   *label)
+int     cal_len_line                (char   *label)
 {
         char    *p  =   label; 
-        while(*p)
-                p++;
+        int     nombre;
 
-        return (p - label);
+        nombre      =   0;
+
+        while(*p)
+        {
+                p++;
+                nombre++;
+        }
+
+        return (nombre);
 }
 
-void    calcul_longueur_header      (char   *label,int  longueur_label, int *length_header)
+void    add_char                    (char **ban, int ligne, int position, char c)
 {
-        for(int i = 0; i < longueur_label; i++)
+        ban[ligne][position] = c;
+}
+
+void    cal_len_ban                 (char *label, int len_label, int *len_header)
+{
+        *len_header  =   1;
+
+        for(int  j = 0; j < len_label; j++)
         {
-            if(label[i] == 32)
+            if(label[j] == 32)
             {
-                *length_header  +=  2;
+                *len_header +=  2;
             }
-            else if((label[i] >= 65) && (label[i] <= 90))
+            else if((label[j] >= 65) && (label[j] <= 90))
             {
-                int x;
-                int y;
-
-                x   =   label[i] - 65;
-                y   =   ((Majuscule_C   *)  majuscules_C[x])->caractere;
-
-                *length_header  +=  y;
+                int x   =   label[j] - 65;
+                *len_header +=  ((Majuscule_C *) majuscules_C[x])->caractere;
             }
-            else if((label[i] >= 97) && (label[i] <= 122))
+            else if((label[j] >= 97) && (label[j] <= 122))
             {
-                int x;
-                int y;
-
-                x   =   label[i] - 97;
-                y   =   ((Minuscule_C   *)  minuscules_C[x])->caractere;
-
-                *length_header  +=  y;
+                int x   =   label[j] - 97;
+                *len_header +=  ((Minuscule_C *) minuscules_C[x])->caractere;
             }
-            else if((label[i] >= 48) && (label[i] <= 57))
+            else if((label[j] >= 48) && (label[j] <= 57))
             {
-                int x;
-                int y;
-
-                x   =   label[i] - 48;
-                y   =   ((Chiffre_C *)  chiffres_C[x])->caractere;
-
-                *length_header  +=  y;
+                int x   =   label[j] - 48;
+                *len_header +=  ((Chiffre_C *) chiffres_C[x])->caractere;
             }
             else
-                printf("Erreur de caractere dans le label");
-        }
-}
-
-void    creer_banniere              (char   *label, char    **banniere, int    longueur_label)
-{
-        for(int i = 0; i <= 12; i ++)
-        {
-            for(int j = 0; j < longueur_label; j++)
             {
-                if(label[j] == 32)
-                {
-                    strcat(banniere[i], "  ");
-                }
-                else if((label[j] >= 65) && (label[j] <= 90))
-                {
-                    int     x;
-                    char    **y;
-
-                    x   =   label[j] - 65;
-                    y   =   ((Majuscule_C   *)  majuscules_C[x])->rows[i];
-
-                    strcat(banniere[i], y[i]);
-                }
-                else if((label[j] >= 97) && (label[j] <= 122))
-                {
-                    int     x;
-                    char    **y;
-
-                    x   =   label[j] - 97;
-                    y   =   ((Minuscule_C   *)  minuscules_C[x])->rows[i];
-
-                    strcat(banniere[i], y[i]);
-                }
-                else if((label[j] >= 48) && (label[j] <= 57))
-                {
-                    int     x;
-                    char    **y;
-
-                    x   =   label[j] - 48;
-                    y   =   ((Chiffre_C *)  chiffres_C[x])->rows[i];
-
-                    strcat(banniere[i], y[i]);
-                }
-                strcat(banniere[i], " ");
+                printf("Erreur de caractere dans le label\n");
             }
         }
 }
 
-void    show_banniere               (char  **banniere)
+void    creat_ban                   (char *label, char **ban, int len_label, int *len_header)
 {
         for(int i = 0; i <= 12; i++)
         {
-            printf("%s/n", banniere[i]);
+            int len_line    =   0;
+
+            for(int j = 0; j < len_label; j++)
+            {
+                if(label[j] == 32)
+                {
+                    add_char(ban, i, len_line, ' ');
+                    len_line++;
+                    add_char(ban, i, len_line, ' ');
+                    len_line++;
+                }
+                else if((label[j] >= 65) && (label[j] <= 90))
+                {
+                    int x       =   label[j] - 65;
+                    char **y    =   ((Majuscule_C *) majuscules_C[x])->rows[i];
+                    int z       =   ((Majuscule_C *) majuscules_C[x])->caractere;
+
+                    for(int a = 0; a < z; a++)
+                    {
+                        add_char(ban, i, len_line, *y[a]);
+                        len_line++;
+                    }
+                }
+                else if((label[j] >= 97) && (label[j] <= 122))
+                {
+                    int x       =   label[j] - 97;
+                    char **y    =   ((Minuscule_C *) minuscules_C[x])->rows[i];
+                    int z       =   ((Minuscule_C *) minuscules_C[x])->caractere;
+
+                    for(int a = 0; a < z; a++)
+                    {
+                        add_char(ban, i, len_line, *y[a]);
+                        len_line++;
+                    }
+                }
+                else if((label[j] >= 48) && (label[j] <= 57))
+                {
+                    int x       =   label[j] - 48;
+                    char **y    =   ((Chiffre_C *) chiffres_C[x])->rows[i];
+                    int z       =   ((Chiffre_C *) chiffres_C[x])->caractere;
+
+                    for(int a = 0; a < z; a++)
+                    {
+                        add_char(ban, i, len_line, *y[a]);
+                        len_line++;
+                    }
+                }
+                else
+                {
+                    add_char(ban, i, *len_header, '\0');
+                }
+            }
         }
 }
 
-void    test_allocation_memoire     (void   *variable)
+void    show_ban                    (char  **ban)
 {
-        if(!    variable)
+        for(int i = 0; i < 12; i++)
         {
-            printf("Erreur d'allocution de la memoire pour la variable %s", (char   *)  variable);
-            free(variable);
+            printf("%s\n", ban[i]);
         }
 }
+
+void    test_memorie                (void   *var, char  *var_name)
+{
+        if(!var)
+        {
+            printf("Erreur d'allocution de la memoire pour la variable %s", var_name);
+            free(var);
+        }
+        else
+            printf("Allocation de mémoire pour la variable %s => OK\n", var_name);
+}
+

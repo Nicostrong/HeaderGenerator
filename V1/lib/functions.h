@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 13:34:32                                                                       */
-/*  Updated : 26/04/2023 15:47:24                                                                       */
+/*  Updated : 01/05/2023 15:18:24                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -38,15 +38,17 @@ void    ft_putstr               (char   *str);
 
 void    ft_strcpy               (char   *dest, char *scr);
 
-int     calcul_longueur_ligne   (char   *label);
+int     cal_len_line            (char   *label);
 
-void    calcul_longueur_header  (char   *label, int longueur_label, int *lenght_header);
+void    add_char                (char   **ban, int  line, int   position, char  c);
 
-void    creer_banniere          (char   *label, char    **banniere, int longueur_label);
+void    cal_len_ban             (char   *label, int len_label, int  *len_header);
+        
+void    creat_ban               (char   *label, char    **ban, int  len_label, int  *len_header);
 
-void    show_banniere           (char   **banniere);
+void    show_ban                (char   **ban);
 
-void    test_allocation_memoire (void   *variable);
+void    test_memorie            (void   *var, char  *var_name);
 
 #endif
 

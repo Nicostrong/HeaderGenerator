@@ -17,7 +17,7 @@
 #*  By: Nicostrong <nicostrong@msn.com>                                                                 *#
 #*                                                                                                      *#
 #*  Created : 25/04/2023 09:53:03                                                                       *#
-#*  Updated : 25/04/2023 15:00:01                                                                       *#
+#*  Updated : 26/04/2023 19:42:01                                                                       *#
 #*                                                                                                      *#
 #* **************************************************************************************************** *#
 
@@ -40,7 +40,7 @@ debug:
 	@clear
 	@echo "Compilation en mode debug"
 	gcc -g -o $(NAME_DEBUG) $(SRC) $(FLAGW) $(LIB)
-	gdb $(NAME_DEBUG)
+	sudo gdb $(NAME_DEBUG)
 
 clean:
 	/bin/rm -f *.o
