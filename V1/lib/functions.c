@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:29:51                                                                       */
-/*  Updated : 01/05/2023 21:01:44                                                                       */
+/*  Updated : 02/05/2023 11:10:29                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -77,28 +77,28 @@ void    add_char                    (char **ban, int ligne, int position, char c
 
 void    cal_len_ban                 (char *label, int len_label, int *len_header)
 {
-        *len_header  =   1;
+        *len_header  =   0;
 
         for(int  j = 0; j < len_label; j++)
         {
             if(label[j] == 32)
             {
-                *len_header +=  2;
+                *len_header +=  3;
             }
             else if((label[j] >= 65) && (label[j] <= 90))
             {
                 int x   =   label[j] - 65;
-                *len_header +=  ((Majuscule_C *) majuscules_C[x])->caractere;
+                *len_header +=  (((Majuscule_C *) majuscules_C[x])->caractere) + 1;
             }
             else if((label[j] >= 97) && (label[j] <= 122))
             {
                 int x   =   label[j] - 97;
-                *len_header +=  ((Minuscule_C *) minuscules_C[x])->caractere;
+                *len_header +=  (((Minuscule_C *) minuscules_C[x])->caractere) + 1;
             }
             else if((label[j] >= 48) && (label[j] <= 57))
             {
                 int x   =   label[j] - 48;
-                *len_header +=  ((Chiffre_C *) chiffres_C[x])->caractere;
+                *len_header +=  (((Chiffre_C *) chiffres_C[x])->caractere) + 1;
             }
             else
             {
@@ -146,6 +146,7 @@ void    creat_ban                   (char *label, char **ban, int len_label, int
             for(j = 0; j < len_label; j++)
             {
                 int     a;
+                int     b;
                 int     x;
                 int     z;
                 char    *y  =   NULL;
@@ -154,10 +155,11 @@ void    creat_ban                   (char *label, char **ban, int len_label, int
 
                 if(label[j] == ' ')
                 {
-                    add_char(ban, i, cursor, ' ');
-                    cursor++;
-                    add_char(ban, i, cursor, ' ');
-                    cursor++;
+                    for(b = 0; b < 3; b++)
+                    {
+                        add_char(ban, i, cursor, ' ');
+                        cursor++;
+                    }
                 }
                 else
                 {
@@ -166,46 +168,37 @@ void    creat_ban                   (char *label, char **ban, int len_label, int
                         x   =   label[j] - 'A';
                         y   =   ((Majuscule_C *) majuscules_C[x])->rows[i][0];
                         z   =   ((Majuscule_C *) majuscules_C[x])->caractere;
-
-                        for(a = 0; a < z; a++)
-                        {
-                            add_char(ban, i, cursor, y[a]);
-                            cursor++;
-                        }
                     }
                     else if(label[j] >= 'a' && label[j] <= 'z')
                     {
                         x   =   label[j] - 'a';
                         y   =   ((Minuscule_C *) minuscules_C[x])->rows[i][0];
                         z   =   ((Minuscule_C *) minuscules_C[x])->caractere;
-
-                        for(a = 0; a < z; a++)
-                        {
-                            add_char(ban, i, cursor, y[a]);
-                            cursor++;
-                        }
                     }
                     else if(label[j] >= '0' && label[j] <= '9')
                     {
                         x   =   label[j] - '0';
                         y   =   ((Chiffre_C *) chiffres_C[x])->rows[i][0];
                         z   =   ((Chiffre_C *) chiffres_C[x])->caractere;
-
-                        for(a = 0; a < z; a++)
-                        {
-                            add_char(ban, i, cursor, y[a]);
-                            cursor++;
-                        }
                     }
                     else
                     {
-                        printf("Erreur de caractere dans le label non pris en charge");
+                        printf("Erreur de caractere dans le label non pris en charge\n");
                     }
                 }
-                if (cursor == *len_header)
+                
+                for(a = 0; a < z; a++)
                 {
-                    add_char(ban, i, *len_header, '\0');
-                    cursor  =   0;
+                    add_char(ban, i, cursor, y[a]);
+                    cursor++;
+                    add_char(ban, i, cursor, ' ');
+                    cursor++;
+
+                    if (cursor == *len_header)
+                    {
+                        add_char(ban, i, *len_header, '\0');
+                        cursor  =   0;
+                    }
                 }
             }
         }
