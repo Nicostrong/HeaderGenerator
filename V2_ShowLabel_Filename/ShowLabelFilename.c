@@ -17,14 +17,14 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 25/04/2023 13:45:19                                                                       */
-/*  Updated : 25/04/2023 14:58:13                                                                       */
+/*  Updated : 02/05/2023 15:41:02                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
-#include "lib/functions.h"
-#include "lib/libmin.h"
-#include "lib/libmaj.h"
-#include "lib/libch.h"
+#include "../lib/functions.h"
+#include "../lib/libmin.h"
+#include "../lib/libmaj.h"
+#include "../lib/libch.h"
 
 int     main(int    argc, char  **argv)
 {
@@ -60,7 +60,7 @@ int     main(int    argc, char  **argv)
         ft_strcpy(filename, argv[2]);
     }
 
-    longueur_label  =   calcul_longueur_ligne(label);
+    longueur_label  =   cal_len_line(label);
 
     printf("Label: %s\n", label);
     printf("Nombre de caractere: %d\n", longueur_label);

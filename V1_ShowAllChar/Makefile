@@ -17,15 +17,15 @@
 #*  By: Nicostrong <nicostrong@msn.com>                                                                 *#
 #*                                                                                                      *#
 #*  Created : 25/04/2023 09:53:03                                                                       *#
-#*  Updated : 25/04/2023 14:58:01                                                                       *#
+#*  Updated : 02/05/2023 15:35:01                                                                       *#
 #*                                                                                                      *#
 #* **************************************************************************************************** *#
 
-NAME = ShowLabelFilename
+NAME = ShowAllChar
 
-SRC = recup_label_filename.c lib/functions.c
+SRC = ShowAllChar.c
 
-LIB = -Llib -lmin -lmaj -lch
+LIB = -L../lib -lmin -lmaj -lch
 
 FLAGW = -W -Wall -Werror
 
@@ -33,6 +33,8 @@ all:
 	@clear
 	@echo "Compilation :"
 	gcc -o $(NAME) $(SRC) $(FLAGW) $(LIB)
+	@echo "Exécussion"
+	./$(NAME)
 
 clean:
 	/bin/rm -f *.o

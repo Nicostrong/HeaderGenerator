@@ -17,14 +17,14 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 25/04/2023 15:02:06                                                                       */
-/*  Updated : 02/05/2023 12:43:31                                                                       */
+/*  Updated : 02/05/2023 15:42:40                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
-#include "lib/functions.h"
-#include "lib/libmin.h"
-#include "lib/libmaj.h"
-#include "lib/libch.h"
+#include "../lib/functions.h"
+#include "../lib/libmin.h"
+#include "../lib/libmaj.h"
+#include "../lib/libch.h"
 
 int     main        (int    argc, char  **argv)
 {

@@ -12,20 +12,22 @@
 #*                                                                                                ###   *#
 #*  ################################################################################################    *#
 #*                                                                                                      *#
-#*  File: Makefile                                                                                      *#
+#*  File: ShowLabelToASCIIArt                                                                           *#
 #*                                                                                                      *#
 #*  By: Nicostrong <nicostrong@msn.com>                                                                 *#
 #*                                                                                                      *#
 #*  Created : 25/04/2023 09:53:03                                                                       *#
-#*  Updated : 25/04/2023 09:58:01                                                                       *#
+#*  Updated : 02/05/2023 11:41:01                                                                       *#
 #*                                                                                                      *#
 #* **************************************************************************************************** *#
 
-NAME = ShowAllChar
+NAME = ShowLabelToASCIIArt
 
-SRC = affichage_tout_caracteres.c
+NAME_DEBUG = prog_debug
 
-LIB = -Llib -lmin -lmaj -lch
+SRC = ShowLabelToASCIIArt.c ../lib/functions.c
+
+LIB = -L../lib -lmin -lmaj -lch
 
 FLAGW = -W -Wall -Werror
 
@@ -33,8 +35,12 @@ all:
 	@clear
 	@echo "Compilation :"
 	gcc -o $(NAME) $(SRC) $(FLAGW) $(LIB)
-	@echo "Exécussion"
-	./$(NAME)
+
+debug:
+	@clear
+	@echo "Compilation en mode debug"
+	gcc -g -o $(NAME_DEBUG) $(SRC) $(FLAGW) $(LIB)
+	gdb $(NAME_DEBUG)
 
 clean:
 	/bin/rm -f *.o

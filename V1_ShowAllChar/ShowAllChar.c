@@ -12,54 +12,51 @@
 /*                                                                                                ###   */
 /*  ################################################################################################    */
 /*                                                                                                      */
-/*  File: README.md                                                                                     */
+/*  File: ShowAllChar.c                                                                                 */
 /*                                                                                                      */
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
-/*  Created : 12/04/2023 15:41:21                                                                       */
-/*  Updated : 02/05/2023 15:49:08                                                                       */
+/*  Created : 11/04/2023 16:46:17                                                                       */
+/*  Updated : 02/05/2023 15:35:00                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
-Hi,
+#include "../lib/functions.h"
+#include "../lib/libmin.h"
+#include "../lib/libmaj.h"
+#include "../lib/libch.h"
 
-this repository git is made for a new program in langage c for generate a
-header.
+int     main()
+{
+    for(int a = 0; a < 26; a++)
+    {
+        afficher_min_C((void    *)  &a);
+    }
+    
+    for(int b = 0; b < 26; b++)
+    {
+        afficher_min_A((void    *)  &b);
+    }
 
-when this file README.md
+    for(int c = 0; c < 26; c++)
+    {
+        afficher_maj_C((void    *)  &c);
+    }
+    
+    for(int d = 0; d < 26; d++)
+    {
+        afficher_maj_A((void    *)  &d);
+    }
 
-This is the start of this program, and I'm beginner in c programmation.
+    for(int x = 0; x < 10; x++)
+    {
+        afficher_chiffre_C((Chiffre_C   *)  chiffres_C[x]);
+    }
 
-########################################################################
+    for(int y = 0; y < 10; y++)
+    {
+        afficher_chiffre_N((Chiffre_N   *)  chiffres_N[y]);
+    }
 
-Bonjour,
-
-vous vous trouver à la racine du dépôt git qui contient, pour l'instant pas
-grand chose, mais au final un programme qui créra un header à vos feuilles de
-codes sources.
-
-Son utilisation je la souhaite simple, on lance le programme et on lui donne en
-parametre ce que l'on veut voir d'afficher dans l'en-tête du fichier ainsi que
-le nom du fichier a créer.
-
-Par exemple pour ce fichier README.md :
-
-./HeaderGenerator "nicosTronG" README.md
-
-Vous pouvez remarquer qu'il y aura une différence entre les lettres minuscules
-et majuscules, leurs impacts dans la présentation fera varier le style de
-l'en-tête.
-
-Pour l'instant, je ne suis qu'au début de l'élaboration de ce programme.
-
-Je suis débutant en language c donc ca va me prendre du temps pour arriver au
-bout de ce petit challange.
-
-Soyez indulgent et patient.
-
-Toutes critiques constructives sont les bienvenues.
-
-Nicostrong.
-
-########################################################################
-
+    return (0);
+}
