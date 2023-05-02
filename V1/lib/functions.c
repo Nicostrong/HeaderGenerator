@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:29:51                                                                       */
-/*  Updated : 02/05/2023 11:10:29                                                                       */
+/*  Updated : 02/05/2023 12:12:12                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -133,6 +133,7 @@ void    banniere                    (char **ban, int *len_header)
             cursor = 0;
         }
 }
+
 void    creat_ban                   (char *label, char **ban, int len_label, int *len_header)
 {
         int     cursor;
@@ -191,14 +192,15 @@ void    creat_ban                   (char *label, char **ban, int len_label, int
                 {
                     add_char(ban, i, cursor, y[a]);
                     cursor++;
-                    add_char(ban, i, cursor, ' ');
-                    cursor++;
+                }
 
-                    if (cursor == *len_header)
-                    {
-                        add_char(ban, i, *len_header, '\0');
-                        cursor  =   0;
-                    }
+                add_char(ban, i, cursor, ' ');
+                cursor++;
+
+                if (cursor == *len_header)
+                {
+                    add_char(ban, i, *len_header, '\0');
+                    cursor  =   0;
                 }
             }
         }
