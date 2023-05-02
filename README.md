@@ -61,3 +61,14 @@ Toutes critiques constructives sont les bienvenues.
 
 Nicostrong.
 
+########################################################################
+
+Comment faire avec les fichiers Makefile
+
+il suffit de less renommer Makefile puis de l'appeler avec la commande make
+
+la commande make debug est utilise pour le debugage
+
+lors de l'execussion du programme, n'oubliez pas d'indiquer le label et un nom
+de fichier (pour l'instant non utilisé)
+
