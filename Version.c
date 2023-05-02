@@ -55,6 +55,8 @@ V3  :   "ShowLabelToASCIIArt"
 
     En effet, je vais transformer le "label" en caracteres ASCII Art et l'afficher.
 
+    Limitation de la longueur du header a 120 caracteres.
+
 V4  :   "ShowLabelOnFrame"
 
     Maintenant que nous avons notre "label" en caractere ASCII Art, nous allons ajouter

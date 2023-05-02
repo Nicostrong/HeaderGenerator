@@ -17,11 +17,13 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:29:51                                                                       */
-/*  Updated : 02/05/2023 12:43:30                                                                       */
+/*  Updated : 02/05/2023 17:19:20                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
 #include "functions.h"
+
+const   int LEN_MAX_HEADER      =   120;
 
 void    ft_putchar                  (char   c)
 {
@@ -107,33 +109,6 @@ void    cal_len_ban                 (char *label, int len_label, int *len_header
         }
 }
 
-void    banniere                    (char **ban, int *len_header)
-{
-        int cursor = 0;
-        int p   =   18;
-
-        for(int i = 0; i < 12; i++)
-        {
-            while((cursor + 1) != (*len_header))
-            {
-                char *y     =   ((Majuscule_C *) majuscules_C[p])->rows[i][0];
-                int z       =   ((Majuscule_C *) majuscules_C[p])->caractere;
-
-                for(int a = 0; a < z; a++)
-                {
-                    add_char(ban, i, cursor, y[a]);
-                    cursor++;
-                }
-                /*
-                add_char(ban, i , cursor, 'F');
-                cursor++;
-                */
-            }
-            add_char(ban, i, *len_header, '\0');
-            cursor = 0;
-        }
-}
-
 void    creat_ban                   (char *label, char **ban, int len_label, int *len_header)
 {
         int     cursor;
@@ -155,15 +130,57 @@ void    creat_ban                   (char *label, char **ban, int len_label, int
 
                 if(label[j] >= 'A' && label[j] <= 'Z')
                 {
-                    x   =   label[j] - 'A';
-                    y   =   ((Majuscule_A *) majuscules_A[x])->rows[i][0];
-                    z   =   ((Majuscule_A *) majuscules_A[x])->caractere;
+                    if(label[j] == 'I')
+                    {
+                        x   =   label[j] - 'A';
+                        y   =   ((Majuscule_A_i *) majuscules_A[x])->rows[i][0];
+                        z   =   ((Majuscule_A_i *) majuscules_A[x])->caractere;
+                    }
+                    else if(label[j] == 'M' || label[j] == 'N')
+                    {
+                        x   =   label[j] - 'A';
+                        y   =   ((Majuscule_A_mn *) majuscules_A[x])->rows[i][0];
+                        z   =   ((Majuscule_A_mn *) majuscules_A[x])->caractere;
+                    }
+                    else if(label[j] == 'W')
+                    {
+                        x   =   label[j] - 'A';
+                        y   =   ((Majuscule_A_w *) majuscules_A[x])->rows[i][0];
+                        z   =   ((Majuscule_A_w *) majuscules_A[x])->caractere;
+                    }
+                    else
+                    {
+                        x   =   label[j] - 'A';
+                        y   =   ((Majuscule_A *) majuscules_A[x])->rows[i][0];
+                        z   =   ((Majuscule_A *) majuscules_A[x])->caractere;
+                    }
                 }
                 else if(label[j] >= 'a' && label[j] <= 'z')
                 {
-                    x   =   label[j] - 'a';
-                    y   =   ((Minuscule_A *) minuscules_A[x])->rows[i][0];
-                    z   =   ((Minuscule_A *) minuscules_A[x])->caractere;
+                    if(label[j] == 'i')
+                    {
+                        x   =   label[j] - 'a';
+                        y   =   ((Minuscule_A_i *) minuscules_A[x])->rows[i][0];
+                        z   =   ((Minuscule_A_i *) minuscules_A[x])->caractere;
+                    }
+                    else if(label[j] == 'm' || label[j] == 'n')
+                    {
+                        x   =   label[j] - 'a';
+                        y   =   ((Minuscule_A_mn *) minuscules_A[x])->rows[i][0];
+                        z   =   ((Minuscule_A_mn *) minuscules_A[x])->caractere;
+                    }
+                    else if(label[j] == 'w')
+                    {
+                        x   =   label[j] - 'a';
+                        y   =   ((Minuscule_A_w *) minuscules_A[x])->rows[i][0];
+                        z   =   ((Minuscule_A_w *) minuscules_A[x])->caractere;
+                    }
+                    else
+                    {
+                        x   =   label[j] - 'a';
+                        y   =   ((Minuscule_A *) minuscules_A[x])->rows[i][0];
+                        z   =   ((Minuscule_A *) minuscules_A[x])->caractere;
+                    }
                 }
                 else if(label[j] >= '0' && label[j] <= '9')
                 {

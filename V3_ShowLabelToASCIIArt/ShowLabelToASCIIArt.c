@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 25/04/2023 15:02:06                                                                       */
-/*  Updated : 02/05/2023 15:42:40                                                                       */
+/*  Updated : 02/05/2023 17:07:27                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -54,6 +54,12 @@ int     main        (int    argc, char  **argv)
         len_label   =   cal_len_line    (label);
         cal_len_ban     (label, len_label, len_header);
 
+        if(*len_header >= LEN_MAX_HEADER)
+        {
+            printf("Label trop long\n");
+            return (1);
+        }
+
         char    **ban          =   malloc(sizeof(char *) * 12);
         
         //test_memorie    ((void  *)  ban, "banniere");
@@ -75,7 +81,6 @@ int     main        (int    argc, char  **argv)
         printf      ("Filename: %s\n", filename);
         printf      ("Voiçi la bannière :\n");
 
-        //banniere    (&ban[0], len_header);
         creat_ban(label, &ban[0], len_label, len_header);
 
         show_ban    (&ban[0]);
