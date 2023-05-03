@@ -196,7 +196,7 @@ const   Majuscule_C     J_c =   {
 };
 
 const   Majuscule_C     K_c =   {
-    .caractere  =   12,
+    .caractere  =   8,
     .rows       =   {
         {"        "},
         {"        "},

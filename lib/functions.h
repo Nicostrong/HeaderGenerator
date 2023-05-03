@@ -48,7 +48,7 @@ void    cal_len_ban             (char   *label, int len_label, int  *len_header)
         
 void    creat_ban               (char   *label, char    **ban, int  len_label, int  *len_header);
 
-void    show_ban                (char   **ban);
+void    show_ban                (char   **ban, int  *len_header);
 
 void    test_memorie            (void   *var, char  *var_name);
 

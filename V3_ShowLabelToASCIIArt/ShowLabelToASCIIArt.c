@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 25/04/2023 15:02:06                                                                       */
-/*  Updated : 02/05/2023 17:07:27                                                                       */
+/*  Updated : 03/05/2023 20:25:24                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -33,13 +33,13 @@ int     main        (int    argc, char  **argv)
         int     *len_header         =   malloc(sizeof(int));
         int     len_label;
 
-        //test_memorie    ((void  *)  label, "label");
-        //test_memorie    ((void  *)  filename, "filename");
-        //test_memorie    ((void  *)  len_header, "longueur header");
+        test_memorie    ((void  *)  label, "label");
+        test_memorie    ((void  *)  filename, "filename");
+        test_memorie    ((void  *)  len_header, "longueur header");
 
         if(argc < 3)
         {
-            printf      ("Usage : %s <label> <filename>\n", argv[0]);
+            printf      ("Usage : %s <label> || \"la bel\" <filename>\n", argv[0]);
             return (1);
         }
         if(argv[1])
@@ -62,12 +62,12 @@ int     main        (int    argc, char  **argv)
 
         char    **ban          =   malloc(sizeof(char *) * 12);
         
-        //test_memorie    ((void  *)  ban, "banniere");
+        test_memorie    ((void  *)  ban, "banniere");
         
         for(int i = 0; i < 12; i++)
         {
             ban[i] =   malloc(sizeof(char) * (*len_header));
-            //test_memorie    ((void  *)  ban[i], "banniere ligne");
+            test_memorie    ((void  *)  ban[i], "banniere ligne");
         }
         printf      ("Label: %s\n", label);
 
@@ -83,7 +83,10 @@ int     main        (int    argc, char  **argv)
 
         creat_ban(label, &ban[0], len_label, len_header);
 
-        show_ban    (&ban[0]);
+        show_ban    (&ban[0], len_header);
+
+        for(int i = 0; i < *len_header; i++)
+            printf("%d", i%10);
 
         free    (label);
         free    (filename);
