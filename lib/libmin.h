@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 24/04/2023 15:33:01                                                                       */
-/*  Updated : 24/04/2023 16:59:36                                                                       */
+/*  Updated : 04/05/2023 11:28:56                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -46,14 +46,14 @@ typedef struct  Minuscule_C_i   Minuscule_C_i;
 
 void    afficher_minuscule_C_i  (Minuscule_C_i  *numero_lettre_minuscule);
 
-struct  Minuscule_C_mn          {
+struct  Minuscule_C_m           {
                                 int     caractere;
                                 char    *rows[12][13];
                                 };
 
-typedef struct  Minuscule_C_mn  Minuscule_C_mn;
+typedef struct  Minuscule_C_m   Minuscule_C_m;
 
-void    afficher_minuscule_C_mn (Minuscule_C_mn *numero_lettre_minuscule);
+void    afficher_minuscule_C_m  (Minuscule_C_m  *numero_lettre_minuscule);
 
 struct  Minuscule_C_w           {
                                 int     caractere;
@@ -88,14 +88,14 @@ typedef struct  Minuscule_A_i   Minuscule_A_i;
 
 void    afficher_minuscule_A_i  (Minuscule_A_i  *numero_lettre_minuscule);
 
-struct  Minuscule_A_mn          {
+struct  Minuscule_A_m           {
                                 int     caractere;
                                 char    *rows[12][13];
                                 };
 
-typedef struct  Minuscule_A_mn  Minuscule_A_mn;
+typedef struct  Minuscule_A_m   Minuscule_A_m;
 
-void    afficher_minuscule_A_mn (Minuscule_A_mn *numero_lettre_minuscule);
+void    afficher_minuscule_A_m  (Minuscule_A_m  *numero_lettre_minuscule);
 
 struct  Minuscule_A_w           {
                                 int     caractere;

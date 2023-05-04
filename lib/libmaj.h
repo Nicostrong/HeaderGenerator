@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 24/04/2023 15:39:48                                                                       */
-/*  Updated : 24/04/2023 17:00:32                                                                       */
+/*  Updated : 04/05/2023 11:40:32                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -46,14 +46,14 @@ typedef struct  Majuscule_C_i   Majuscule_C_i;
 
 void    afficher_majuscule_C_i  (Majuscule_C_i  *numero_lettre_majuscule);
 
-struct  Majuscule_C_mn          {
+struct  Majuscule_C_m           {
                                 int     caractere;
                                 char    *rows[12][13];
                                 };
 
-typedef struct  Majuscule_C_mn  Majuscule_C_mn;
+typedef struct  Majuscule_C_m   Majuscule_C_m;
 
-void    afficher_majuscule_C_mn (Majuscule_C_mn *numero_lettre_majuscule);
+void    afficher_majuscule_C_m  (Majuscule_C_m  *numero_lettre_majuscule);
 
 struct  Majuscule_C_w           {
                                 int     caractere;
@@ -88,14 +88,14 @@ typedef struct  Majuscule_A_i   Majuscule_A_i;
 
 void    afficher_majuscule_A_i  (Majuscule_A_i  *numero_lettre_majuscule);
 
-struct  Majuscule_A_mn          {
+struct  Majuscule_A_m           {
                                 int     caractere;
                                 char    *rows[12][13];
                                 };
 
-typedef struct  Majuscule_A_mn  Majuscule_A_mn;
+typedef struct  Majuscule_A_m   Majuscule_A_m;
 
-void    afficher_majuscule_A_mn (Majuscule_A_mn *numero_lettre_majuscule);
+void    afficher_majuscule_A_m  (Majuscule_A_m  *numero_lettre_majuscule);
 
 struct  Majuscule_A_w           {
                                 int     caractere;

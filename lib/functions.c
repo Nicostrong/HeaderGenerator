@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:29:51                                                                       */
-/*  Updated : 03/05/2023 20:28:52                                                                       */
+/*  Updated : 04/05/2023 12:01:12                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -137,11 +137,11 @@ void    creat_ban                   (char *label, char **ban, int len_label, int
                         y   =   ((Majuscule_C_i *) majuscules_C[x])->rows[i][0];
                         z   =   ((Majuscule_C_i *) majuscules_C[x])->caractere;
                     }
-                    else if(label[j] == 'M' || label[j] == 'N')
+                    else if(label[j] == 'M')
                     {
                         x   =   label[j] - 'A';
-                        y   =   ((Majuscule_C_mn *) majuscules_C[x])->rows[i][0];
-                        z   =   ((Majuscule_C_mn *) majuscules_C[x])->caractere;
+                        y   =   ((Majuscule_C_m *) majuscules_C[x])->rows[i][0];
+                        z   =   ((Majuscule_C_m *) majuscules_C[x])->caractere;
                     }
                     else if(label[j] == 'W')
                     {
@@ -164,11 +164,11 @@ void    creat_ban                   (char *label, char **ban, int len_label, int
                         y   =   ((Minuscule_C_i *) minuscules_C[x])->rows[i][0];
                         z   =   ((Minuscule_C_i *) minuscules_C[x])->caractere;
                     }
-                    else if(label[j] == 'm' || label[j] == 'n')
+                    else if(label[j] == 'm')
                     {
                         x   =   label[j] - 'a';
-                        y   =   ((Minuscule_C_mn *) minuscules_C[x])->rows[i][0];
-                        z   =   ((Minuscule_C_mn *) minuscules_C[x])->caractere;
+                        y   =   ((Minuscule_C_m *) minuscules_C[x])->rows[i][0];
+                        z   =   ((Minuscule_C_m *) minuscules_C[x])->caractere;
                     }
                     else if(label[j] == 'w')
                     {

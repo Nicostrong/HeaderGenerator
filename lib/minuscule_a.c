@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:02:56                                                                       */
-/*  Updated : 26/04/2023 10:44:20                                                                       */
+/*  Updated : 04/05/2023 11:30:21                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -29,13 +29,13 @@ const   Minuscule_A     a_a =   {
         {"        "},
         {"        "},
         {"        "},
-        {"   aa   "},
+        {"        "},
         {"  aaaa  "},
         {" aa  aa "},
         {"aa    aa"},
-        {"aaaaaaaa"},
         {"aa    aa"},
-        {"aa    aa"},
+        {" aa  aaa"},
+        {"  aaa  a"},
         {"        "},
         {"        "}}
 };
@@ -45,14 +45,14 @@ const   Minuscule_A     b_a =   {
     .rows       =   {
         {"        "},
         {"        "},
-        {"        "},
+        {"bb      "},
+        {"bb      "},
+        {"bb      "},
+        {"bb      "},
         {"bbbbbbb "},
         {"bb    bb"},
         {"bb   bb "},
-        {"bbbbb   "},
-        {"bb   bb "},
-        {"bb    bb"},
-        {"bbbbbbb "},
+        {"bbbbbb  "},
         {"        "},
         {"        "}}
 };
@@ -63,13 +63,13 @@ const   Minuscule_A     c_a =   {
         {"        "},
         {"        "},
         {"        "},
+        {"        "},
         {"  cccccc"},
         {" cc     "},
         {"cc      "},
         {"cc      "},
-        {"cc      "},
         {" cc     "},
-        {"  cccccc"},
+        {"c cccccc"},
         {"        "},
         {"        "}}
 };
@@ -79,14 +79,14 @@ const   Minuscule_A     d_a =   {
     .rows       =   {
         {"        "},
         {"        "},
-        {"        "},
-        {"dddddd  "},
-        {"dd   dd "},
+        {"      dd"},
+        {"      dd"},
+        {"      dd"},
+        {"      dd"},
+        {" ddddddd"},
         {"dd    dd"},
         {"dd    dd"},
-        {"dd    dd"},
-        {"dd   dd "},
-        {"dddddd  "},
+        {" ddddddd"},
         {"        "},
         {"        "}}
 };
@@ -97,13 +97,13 @@ const   Minuscule_A     e_a =   {
         {"        "},
         {"        "},
         {"        "},
-        {" eeeeeee"},
+        {"        "},
+        {" eeeeee "},
+        {"ee    ee"},
+        {"eeeeeeee"},
         {"ee      "},
-        {"ee      "},
-        {"eeee    "},
-        {"ee      "},
-        {"ee      "},
-        {" eeeeeee"},
+        {"ee    ee"},
+        {"  eeee  "},
         {"        "},
         {"        "}}
 };
@@ -113,14 +113,14 @@ const   Minuscule_A     f_a =   {
     .rows       =   {
         {"        "},
         {"        "},
-        {"        "},
-        {" fffffff"},
-        {"ff      "},
-        {"ff      "},
-        {"ffff    "},
-        {"ff      "},
-        {"ff      "},
-        {"ff      "},
+        {"    ffff"},
+        {"   ff   "},
+        {"  ff    "},
+        {"  ff    "},
+        {"ffffff  "},
+        {"  ff    "},
+        {"  ff    "},
+        {"  ff    "},
         {"        "},
         {"        "}}
 };
@@ -131,15 +131,15 @@ const   Minuscule_A     g_a =   {
         {"        "},
         {"        "},
         {"        "},
-        {"  gggggg"},
-        {" gg     "},
-        {"gg      "},
-        {"gg      "},
-        {"gg  gggg"},
+        {"  gggg  "},
+        {" gg  gg "},
+        {"gg    gg"},
         {" gg  gg "},
         {"  gggg  "},
-        {"        "},
-        {"        "}}
+        {" gg  gg "},
+        {"gg    gg"},
+        {" gg  gg "},
+        {"  gggg  "}}
 };
 
 const   Minuscule_A     h_a =   {
@@ -147,12 +147,12 @@ const   Minuscule_A     h_a =   {
     .rows       =   {
         {"        "},
         {"        "},
-        {"        "},
-        {"hh    hh"},
-        {"hh    hh"},
-        {"hh    hh"},
-        {"hhhhhhhh"},
-        {"hh    hh"},
+        {"hh      "},
+        {"hh      "},
+        {"hh      "},
+        {"hh      "},
+        {"hhhhhh  "},
+        {"hh   hh "},
         {"hh    hh"},
         {"hh    hh"},
         {"        "},
@@ -164,9 +164,9 @@ const   Minuscule_A_i   i_a =   {
     .rows       =   {
         {"      "},
         {"      "},
-        {"      "},
         {"  ii  "},
         {"      "},
+        {"  ii  "},
         {"  ii  "},
         {"  ii  "},
         {"  ii  "},
@@ -181,14 +181,14 @@ const   Minuscule_A     j_a =   {
     .rows       =   {
         {"        "},
         {"        "},
+        {"    jj  "},
         {"        "},
-        {"jjjjjjjj"},
-        {"   jj   "},
-        {"   jj   "},
-        {"   jj   "},
-        {"   jj   "},
-        {"  jj    "},
-        {"jj      "},
+        {"  jjjjjj"},
+        {"    jj  "},
+        {"    jj  "},
+        {"    jj  "},
+        {"jj  jj  "},
+        {" jjj    "},
         {"        "},
         {"        "}}
 };
@@ -215,50 +215,50 @@ const   Minuscule_A     l_a =   {
     .rows       =   {
         {"        "},
         {"        "},
-        {"        "},
-        {"ll      "},
-        {"ll      "},
-        {"ll      "},
-        {"ll      "},
-        {"ll      "},
-        {"ll      "},
-        {"llllllll"},
+        {"llll    "},
+        {"  ll    "},
+        {"  ll    "},
+        {"  ll    "},
+        {"  ll    "},
+        {"  ll    "},
+        {"  ll    "},
+        {"  llllll"},
         {"        "},
         {"        "}}
 };
 
-const   Minuscule_A_mn  m_a =   {
+const   Minuscule_A_m   m_a =   {
     .caractere  =   12,
     .rows       =   {
         {"            "},
         {"            "},
         {"            "},
-        {"mm\\\\    //mm"},
-        {"mm \\\\  // mm"},
-        {"mm  \\\\//  mm"},
-        {"mm        mm"},
-        {"mm        mm"},
-        {"mm        mm"},   
-        {"mm        mm"},
+        {"  mmm  mmm  "},
+        {" mm  mm  mm "},
+        {"mm   mm   mm"},
+        {"mm   mm   mm"},
+        {"mm   mm   mm"},
+        {"mm   mm   mm"},   
+        {"mm   mm   mm"},
         {"            "},
         {"            "}}
 };
 
-const   Minuscule_A_mn  n_a =   {
-    .caractere  =   12,
+const   Minuscule_A     n_a =   {
+    .caractere  =   8,
     .rows       =   {
-        {"            "},
-        {"            "},
-        {"            "},
-        {"nn\\\\      nn"},
-        {"nn \\\\     nn"},
-        {"nn  \\\\    nn"},
-        {"nn   \\\\   nn"},
-        {"nn    \\\\  nn"},
-        {"nn     \\\\ nn"},
-        {"nn      \\\\nn"},
-        {"            "},
-        {"            "}}
+        {"        "},
+        {"        "},
+        {"        "},
+        {"nn nnn  "},
+        {"nnn  nn "},
+        {"nn    nn"},
+        {"nn    nn"},
+        {"nn    nn"},
+        {"nn    nn"},
+        {"nn    nn"},
+        {"        "},
+        {"        "}}
 };
 
 const   Minuscule_A     o_a =   {
@@ -284,15 +284,15 @@ const   Minuscule_A     p_a =   {
         {"        "},
         {"        "},
         {"        "},
+        {"        "},
         {" ppppp  "},
+        {"pp   pp "},
         {"pp    pp"},
-        {"pp    pp"},
+        {"pp   pp "},
         {"pppppp  "},
         {"pp      "},
         {"pp      "},
-        {"pp      "},
-        {"        "},
-        {"        "}}
+        {"pp      "}}
 };
 
 const   Minuscule_A     q_a =   {
@@ -301,15 +301,15 @@ const   Minuscule_A     q_a =   {
         {"        "},
         {"        "},
         {"        "},
-        {" qqqqqq "},
-        {"qq    qq"},
-        {"qq    qq"},
-        {" qqqqqqq"},
-        {"      qq"},
-        {"      qq"},
-        {"      qq"},
         {"        "},
-        {"        "}}
+        {"  qqqq  "},
+        {" qq   qq"},
+        {"qq    qq"},
+        {" qq   qq"},
+        {"  qqqqqq"},
+        {"      qq"},
+        {"      qq"},
+        {"      qq"}}
 };
 
 const   Minuscule_A     r_a =   {
@@ -318,13 +318,13 @@ const   Minuscule_A     r_a =   {
         {"        "},
         {"        "},
         {"        "},
-        {" rrrrrr "},
-        {"rr    rr"},
-        {"rr   rr "},
-        {"rrrrr   "},
-        {"rr  rr  "},
-        {"rr   rr "},
-        {"rr    rr"},
+        {"rr rrrr "},
+        {"rrr   rr"},
+        {"rr      "},
+        {"rr      "},
+        {"rr      "},
+        {"rr      "},
+        {"rr      "},
         {"        "},
         {"        "}}
 };
@@ -350,15 +350,15 @@ const   Minuscule_A     t_a =   {
     .caractere  =   8,
     .rows       =   {
         {"        "},
-        {"        "},
-        {"        "},
-        {"tttttttt"},
+        {"   tt   "},
+        {"   tt   "},
+        {" tttttt "},
         {"   tt   "},
         {"   tt   "},
         {"   tt   "},
         {"   tt   "},
         {"   tt   "},
-        {"   tt   "},
+        {"    ttt "},
         {"        "},
         {"        "}}
 };
@@ -375,7 +375,7 @@ const   Minuscule_A     u_a =   {
         {"uu    uu"},
         {"uu    uu"},
         {"uu    uu"},
-        {" uuuuuu "},
+        {" uuuuu u"},
         {"        "},
         {"        "}}
 };

@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:14:16                                                                       */
-/*  Updated : 26/04/2023 10:43:30                                                                       */
+/*  Updated : 04/05/2023 11:48:53                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -30,11 +30,11 @@ const   Majuscule_A     A_a =   {
     .rows       =   {
         {"        "},
         {"        "},
+        {"   AA   "},
+        {"  AAAA  "},
+        {" AA  AA "},
+        {"AA    AA"},
         {"AAAAAAAA"},
-        {"AA    AA"},
-        {"AA    AA"},
-        {"AAAAAAAA"},
-        {"AA    AA"},
         {"AA    AA"},
         {"AA    AA"},
         {"AA    AA"},
@@ -229,16 +229,16 @@ const   Majuscule_A     L_a =   {
         {"LLLLLLL@"}}
 };
 
-const   Majuscule_A_mn  M_a =   {
+const   Majuscule_A_m   M_a =   {
     .caractere  =   12,
     .rows       =   {
         {"            "},
         {"            "},
         {"MM        MM"},
-        {"MM\\      /MM"},
-        {"MM\\\\    //MM"},
-        {"MM \\\\  // MM"},
-        {"MM  \\\\_// MM"},
+        {"MMM      MMM"},
+        {"MM MM  MM MM"},
+        {"MM  MMMM  MM"},
+        {"MM   MM   MM"},
         {"MM        MM"},
         {"MM        MM"},
         {"MM        MM"},
@@ -246,21 +246,21 @@ const   Majuscule_A_mn  M_a =   {
         {"            "}}
 };
 
-const   Majuscule_A_mn  N_a =   {
-    .caractere  =   12,
+const   Majuscule_A     N_a =   {
+    .caractere  =   8,
     .rows       =   {
-        {"            "},
-        {"            "},
-        {"NN        NN"},
-        {"NN\\       NN"},
-        {"NN \\\\     NN"},
-        {"NN  \\\\    NN"},
-        {"NN   \\\\   NN"},
-        {"NN    \\\\  NN"},
-        {"NN      \\\\NN"},
-        {"NN       \\NN"},
-        {"            "},
-        {"            "}}
+        {"        "},
+        {"        "},
+        {"NN    NN"},
+        {"NNN   NN"},
+        {"NN N  NN"},
+        {"NN N  NN"},
+        {"NN  N NN"},
+        {"NN  N NN"},
+        {"NN   NNN"},
+        {"NN    NN"},
+        {"        "},
+        {"        "}}
 };
 
 const   Majuscule_A     O_a =   {

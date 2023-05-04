@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 24/04/2023 15:58:35                                                                       */
-/*  Updated : 25/04/2023 09:40:55                                                                       */
+/*  Updated : 04/05/2023 11:43:02                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -33,9 +33,9 @@ void    afficher_min_C          (void   *numero_lettre_minuscule)
         
             afficher_minuscule_C_i((Minuscule_C_i   *)  minuscules_C[i]);
         
-        else if(i == 12 || i == 13)
+        else if(i == 12)
             
-            afficher_minuscule_C_mn((Minuscule_C_mn *)  minuscules_C[i]);
+            afficher_minuscule_C_m((Minuscule_C_m  *)  minuscules_C[i]);
         
         else if(i == 22)
             
@@ -64,7 +64,7 @@ void    afficher_minuscule_C_i  (Minuscule_C_i  *lettre_minuscule)
         }
 }
 
-void    afficher_minuscule_C_mn (Minuscule_C_mn *lettre_minuscule)
+void    afficher_minuscule_C_m  (Minuscule_C_m  *lettre_minuscule)
 {
 
         for(int i = 0; i < 12; i++)
@@ -92,9 +92,9 @@ void    afficher_min_A          (void   *numero_lettre_minuscule)
         
             afficher_minuscule_A_i((Minuscule_A_i   *)  minuscules_A[i]);
         
-        else if(i == 12 || i == 13)
+        else if(i == 12)
             
-            afficher_minuscule_A_mn((Minuscule_A_mn *)  minuscules_A[i]);
+            afficher_minuscule_A_m((Minuscule_A_m  *)  minuscules_A[i]);
         
         else if(i == 22)
             
@@ -121,7 +121,7 @@ void    afficher_minuscule_A_i  (Minuscule_A_i  *lettre_minuscule)
         }
 }
 
-void    afficher_minuscule_A_mn (Minuscule_A_mn *lettre_minuscule)
+void    afficher_minuscule_A_m  (Minuscule_A_m  *lettre_minuscule)
 {
         for(int i = 0; i < 12; i++)
         {

@@ -17,7 +17,7 @@
 #*  By: Nicostrong <nicostrong@msn.com>                                                                 *#
 #*                                                                                                      *#
 #*  Created : 25/04/2023 09:53:03                                                                       *#
-#*  Updated : 03/05/2023 20:53:41                                                                       *#
+#*  Updated : 04/05/2023 11:53:41                                                                       *#
 #*                                                                                                      *#
 #* **************************************************************************************************** *#
 
@@ -46,6 +46,7 @@ maj:
 	ar rcs  $(NAME1) $(OBJ1)
 	@echo "Optimisation de la bibliothèque $(NAME1) :"
 	ranlib $(NAME1)
+	/bin/rm -f *.o
 
 min:
 	@echo "Compilation des objets $(SRC2) :"
@@ -54,6 +55,7 @@ min:
 	ar rcs  $(NAME2) $(OBJ2)
 	@echo "Optimisation de la bibliothèque $(NAME2) :"
 	ranlib $(NAME2)
+	/bin/rm -f *.o
 
 ch:
 	@echo "Compilation des objets $(SRC3) :"
@@ -62,9 +64,11 @@ ch:
 	ar rcs  $(NAME3) $(OBJ3)
 	@echo "Optimisation de la bibliothèque $(NAME3) :"
 	ranlib $(NAME3)
+	/bin/rm -f *.o
 
 clean:
 	@clear
 	/bin/rm -f *.o
 	/bin/rm -f *.*~
+	/bin/rm -f *.a
 

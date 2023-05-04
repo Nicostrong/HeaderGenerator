@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 24/04/2023 16:05:43                                                                       */
-/*  Updated : 25/04/2023 09:40:23                                                                       */
+/*  Updated : 04/05/2023 11:44:46                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -33,9 +33,9 @@ void    afficher_maj_C          (void   *numero_lettre_majuscule)
         
             afficher_majuscule_C_i((Majuscule_C_i   *)  majuscules_C[i]);
         
-        else if(i == 12 || i == 13)
+        else if(i == 12)
             
-            afficher_majuscule_C_mn((Majuscule_C_mn *)  majuscules_C[i]);
+            afficher_majuscule_C_m((Majuscule_C_m  *)  majuscules_C[i]);
         
         else if(i == 22)
             
@@ -64,7 +64,7 @@ void    afficher_majuscule_C_i  (Majuscule_C_i  *lettre_majuscule)
         }
 }
 
-void    afficher_majuscule_C_mn (Majuscule_C_mn *lettre_majuscule)
+void    afficher_majuscule_C_m  (Majuscule_C_m  *lettre_majuscule)
 {
 
         for(int i = 0; i < 12; i++)
@@ -92,9 +92,9 @@ void    afficher_maj_A          (void   *numero_lettre_majuscule)
         
             afficher_majuscule_A_i((Majuscule_A_i   *)  majuscules_A[i]);
         
-        else if(i == 12 || i == 13)
+        else if(i == 12)
             
-            afficher_majuscule_A_mn((Majuscule_A_mn *)  majuscules_A[i]);
+            afficher_majuscule_A_m((Majuscule_A_m  *)  majuscules_A[i]);
         
         else if(i == 22)
             
@@ -121,7 +121,7 @@ void    afficher_majuscule_A_i  (Majuscule_A_i  *lettre_majuscule)
         }
 }
 
-void    afficher_majuscule_A_mn (Majuscule_A_mn *lettre_majuscule)
+void    afficher_majuscule_A_m  (Majuscule_A_m  *lettre_majuscule)
 {
         for(int i = 0; i < 12; i++)
         {
