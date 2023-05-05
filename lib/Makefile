@@ -17,7 +17,7 @@
 #*  By: Nicostrong <nicostrong@msn.com>                                                                 *#
 #*                                                                                                      *#
 #*  Created : 25/04/2023 09:53:03                                                                       *#
-#*  Updated : 04/05/2023 11:53:41                                                                       *#
+#*  Updated : 05/05/2023 17:28:31                                                                       *#
 #*                                                                                                      *#
 #* **************************************************************************************************** *#
 
@@ -33,11 +33,14 @@ SRC3	=	ch*.c
 NAME3	=	libch.a
 OBJ3	=	ch*.o
 
+SRC4	=	fx_*.c
+NAME4	=	libfx.a
+OBJ4	=	fx_*.o
 
 
 FLAGW = -W -Wall -Werror
 
-all: clean maj min ch
+all: clean maj min ch fx
 
 maj:
 	@echo "Compilation des objets $(SRC1) :"
@@ -64,6 +67,15 @@ ch:
 	ar rcs  $(NAME3) $(OBJ3)
 	@echo "Optimisation de la bibliothèque $(NAME3) :"
 	ranlib $(NAME3)
+	/bin/rm -f *.o
+
+fx:
+	@echo "Compilation des objets $(SRC4) :"
+	gcc -c $(SRC4) $(FLAGW)
+	@echo "Création de la bibliothèque $(NAME4) :"
+	ar rcs  $(NAME4) $(OBJ4)
+	@echo "Optimisation de la bibliothèque $(NAME4) :"
+	ranlib $(NAME4)
 	/bin/rm -f *.o
 
 clean:

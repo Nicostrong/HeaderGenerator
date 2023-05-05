@@ -12,62 +12,60 @@
 /*                                                                                                ###   */
 /*  ################################################################################################    */
 /*                                                                                                      */
-/*  File: ShowLabelFilename.c                                                                           */
+/*  File: libfx.h                                                                                       */
 /*                                                                                                      */
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
-/*  Created : 25/04/2023 13:45:19                                                                       */
-/*  Updated : 05/05/2023 17:29:23                                                                       */
+/*  Created : 05/05/2023 16:12:25                                                                       */
+/*  Updated : 05/05/2023 17:15:09                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
-#include "../lib/libfx.h"
-#include "../lib/libmin.h"
-#include "../lib/libmaj.h"
-#include "../lib/libch.h"
+#ifndef __H_LIBFX_H__
+# define __H_LIBFX_H__
 
-int     main(int    argc, char  **argv)
-{
-    char    *label      =   malloc(sizeof(char) *   50);
-    char    *filename   =   malloc(sizeof(char) *   50);
-    int     longueur_label;
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <stdbool.h>
+#include "libmin.h"
+#include "libmaj.h"
+#include "libch.h"
 
-    if(!label || !filename)
-    {
-        printf("Erreur d'allocution de la memoire");
-        free(label);
-        free(filename);
-        return (1);
-    }
+extern  const   int LEN_MAX_HEADER;
 
-    label[0]    =   '\0';
-    filename[0] =   '\0';
+// fx_functions.c
 
+void    ft_putchar              (char   c);
 
-    if(argc < 3)
-    {
-        printf("Usage : %s <label> <filename>\n", argv[0]);
-        return (1);
-    }
+void    ft_putstr               (char   *str);
 
-    if(argv[1])
-    {
-        ft_strcpy(label, argv[1]);
-    }
+void    ft_strcpy               (char   *dest, char *scr);
 
-    if(argv[2])
-    {   
-        ft_strcpy(filename, argv[2]);
-    }
+bool    ft_strcmp               (char   *str1, char *str2);
 
-    longueur_label  =   cal_len_line(label);
+int     cal_len_line            (char   *label);
 
-    printf("Label: %s\n", label);
-    printf("Nombre de caractere: %d\n", longueur_label);
-    printf("Filename: %s\n", filename);
+void    add_char                (char   **ban, int  line, int   position, char  c);
 
-    free(label);
-    free(filename);
+void    cal_len_ban             (char   *label, int len_label, int  *len_header);
 
-    return (0);
-}
+void    test_memorie            (void   *var, char  *var_name);
+
+// fx_banniere.c
+        
+void    creat_ban_c             (char   *label, char    **ban, int  len_label, int  *len_header);
+
+void    creat_ban_a             (char   *label, char    **ban, int  len_label, int  *len_header);
+
+void    show_ban                (char   **ban, int  *len_header);
+
+// fx_frame.c
+
+void    ft_putline              (char   start, char middle, char    end, int    longueur);
+
+void    frame                   (int    length, int  height);
+
+#endif
+

@@ -17,7 +17,7 @@
 #*  By: Nicostrong <nicostrong@msn.com>                                                                 *#
 #*                                                                                                      *#
 #*  Created : 25/04/2023 09:53:03                                                                       *#
-#*  Updated : 02/05/2023 11:41:01                                                                       *#
+#*  Updated : 05/05/2023 17:30:44                                                                       *#
 #*                                                                                                      *#
 #* **************************************************************************************************** *#
 
@@ -25,9 +25,9 @@ NAME = ShowLabelToASCIIArt
 
 NAME_DEBUG = prog_debug
 
-SRC = ShowLabelToASCIIArt.c ../lib/functions.c
+SRC = ShowLabelToASCIIArt.c
 
-LIB = -L../lib -lmin -lmaj -lch
+LIB = -L../lib -lmin -lmaj -lch -lfx
 
 FLAGW = -W -Wall -Werror
 

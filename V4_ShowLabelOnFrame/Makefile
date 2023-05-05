@@ -17,15 +17,17 @@
 #*  By: Nicostrong <nicostrong@msn.com>                                                                 *#
 #*                                                                                                      *#
 #*  Created : 25/04/2023 09:53:03                                                                       *#
-#*  Updated : 05/05/2023 17:29:55                                                                       *#
+#*  Updated : 05/05/2023 17:31:43                                                                       *#
 #*                                                                                                      *#
 #* **************************************************************************************************** *#
 
-NAME = ShowLabelFilename
+NAME = ShowLabelOnFrame
 
-SRC = ShowLabelFilename.c
+NAME_DEBUG = prog_debug
 
-LIB = -L../lib -lmin -lmaj -lch -lfx
+SRC = ShowLabelOnFrame.c
+
+LIB = -Llib -lmin -lmaj -lch -lfx
 
 FLAGW = -W -Wall -Werror
 
@@ -34,10 +36,16 @@ all:
 	@echo "Compilation :"
 	gcc -o $(NAME) $(SRC) $(FLAGW) $(LIB)
 
+debug:
+	@clear
+	@echo "Compilation en mode debug"
+	gcc -g -o $(NAME_DEBUG) $(SRC) $(FLAGW) $(LIB)
+	gdb $(NAME_DEBUG)
+
 clean:
 	/bin/rm -f *.o
 	/bin/rm -f *.*~
-
+	
 fclean: clean
 	/bin/rm -f $(NAME)
 

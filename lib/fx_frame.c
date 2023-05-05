@@ -12,50 +12,58 @@
 /*                                                                                                ###   */
 /*  ################################################################################################    */
 /*                                                                                                      */
-/*  File: functions.h                                                                                   */
+/*  File: fx_frame.c                                                                                    */
 /*                                                                                                      */
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
-/*  Created : 15/04/2023 13:34:32                                                                       */
-/*  Updated : 05/05/2023 11:48:24                                                                       */
+/*  Created : 05/05/2023 17:00:46                                                                       */
+/*  Updated : 05/05/2023 17:15:10                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
-#ifndef __H_FUNCTIONS_H__
-# define __H_FUNCTIONS_H__
+#include "libfx.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <stdbool.h>
-#include "libmin.h"
-#include "libmaj.h"
-#include "libch.h"
+void    ft_putline                  (char start, char middle, char end, int longueur)
+{
+        ft_putchar(start);
+        longueur--;
 
-extern  const   int LEN_MAX_HEADER;
-
-void    ft_putchar              (char   c);
-
-void    ft_putstr               (char   *str);
-
-void    ft_strcpy               (char   *dest, char *scr);
-
-bool    ft_strcmp               (char   *str1, char *str2);
-
-int     cal_len_line            (char   *label);
-
-void    add_char                (char   **ban, int  line, int   position, char  c);
-
-void    cal_len_ban             (char   *label, int len_label, int  *len_header);
+        while(longueur > 1)
+        {
+            ft_putchar(middle);
+            longueur--;
+        }
         
-void    creat_ban_c             (char   *label, char    **ban, int  len_label, int  *len_header);
+        if(longueur == 1)
+            ft_putchar(end);
+    
+        ft_putchar('\n');
+}
 
-void    creat_ban_a             (char   *label, char    **ban, int  len_label, int  *len_header);
+void    frame                       (int    length, int  height)
+{
+        char    start = 'O';
+        char    middle = '-';
+        char    hauteur = '|';
+        char    mid_haut = ' ';
 
-void    show_ban                (char   **ban, int  *len_header);
+        if(length < 1 || height < 1)
+        {
+            char    error[] = "Veuillez entrer des parametres x et y plus grand que '0'!!!\n";
+            write(1, error, 62);
+            return;
+        }
 
-void    test_memorie            (void   *var, char  *var_name);
+        ft_putline(start, middle, start, length);
+        height--;
 
-#endif
+        while(height > 1)
+        {
+            ft_putline(hauteur, mid_haut, hauteur, length);
+            height--;
+        }
+
+        if (height == 1)
+            ft_putline(start, middle, start, length);
+}
 
