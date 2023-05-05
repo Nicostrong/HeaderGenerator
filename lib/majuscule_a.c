@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:14:16                                                                       */
-/*  Updated : 04/05/2023 11:48:53                                                                       */
+/*  Updated : 05/05/2023 14:59:26                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -81,14 +81,14 @@ const   Majuscule_A     D_a =   {
     .rows       =   {
         {"        "},
         {"        "},
-        {"DDDDDDD "},
+        {"DDDDDD  "},
+        {"DD   DD "},
         {"DD    DD"},
         {"DD    DD"},
         {"DD    DD"},
         {"DD    DD"},
-        {"DD    DD"},
-        {"DD    DD"},
-        {"DDDDDDD "},
+        {"DD   DD "},
+        {"DDDDDD  "},
         {"        "},
         {"        "}}
 };
@@ -132,13 +132,13 @@ const   Majuscule_A     G_a =   {
     .rows       =   {
         {"        "},
         {"        "},
+        {"        "},
+        {"        "},
+        {"        "},
         {" GGGGGG "},
         {"GG    GG"},
         {"GG    GG"},
-        {"GG    GG"},
-        {"GGGGGGGG"},
-        {"      GG"},
-        {"      GG"},
+        {" GGGGGG "},
         {"      GG"},
         {"      GG"},
         {"@GGGGGG "}}

@@ -17,14 +17,14 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 02/05/2023 15:48:45                                                                       */
-/*  Updated : 02/05/2023 16:03:54                                                                       */
+/*  Updated : 05/05/2023 15:30:12                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
         Pour arriver a creer mon programme HeaderGenarator, je vais proceder petit a petit,
         etape par etape.
 
-        Vous pourrez observer l'evolution du code a trevers ces differentes etapes.
+        Vous pourrez observer l'evolution du code a travers ces differentes etapes.
 
         Au final, j'espere obtenir un programme fonctionnel sans bug et correctement code.
 
@@ -56,6 +56,11 @@ V3  :   "ShowLabelToASCIIArt"
     En effet, je vais transformer le "label" en caracteres ASCII Art et l'afficher.
 
     Limitation de la longueur du header a 120 caracteres.
+
+    Ajout d'un deuxieme argument pour definir le style daffichage:
+
+    '-c' pour un affichage de la banniere en style ASCII Art
+    '-a' pour un affichage de la banniere en style alphabetique
 
 V4  :   "ShowLabelOnFrame"
 

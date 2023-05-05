@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 25/04/2023 15:02:06                                                                       */
-/*  Updated : 04/05/2023 12:01:12                                                                       */
+/*  Updated : 05/05/2023 14:30:57                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -30,25 +30,30 @@ int     main        (int    argc, char  **argv)
 {
         char    *label              =   malloc(sizeof(char) *   50);
         char    *filename           =   malloc(sizeof(char) *   50);
+        char    *style              =   malloc(sizeof(char));
         int     *len_header         =   malloc(sizeof(int));
         int     len_label;
 
-        test_memorie    ((void  *)  label, "label");
-        test_memorie    ((void  *)  filename, "filename");
-        test_memorie    ((void  *)  len_header, "longueur header");
+        //test_memorie    ((void  *)  label, "label");
+        //test_memorie    ((void  *)  filename, "filename");
+        //test_memorie    ((void  *)  style, "Style d'écriture");
+        //test_memorie    ((void  *)  len_header, "longueur header");
 
-        if(argc < 3)
+        if(argc < 4)
         {
-            printf      ("Usage : %s <label> || \"la bel\" <filename>\n", argv[0]);
+            printf      ("Usage : %s <label> || \"la bel\" <style = '-c' for ASCII Art or '-a' for Alphabetic> <filename>\n", argv[0]);
             return (1);
         }
-        if(argv[1])
+        else if(!ft_strcmp(argv[2],"-c") && !ft_strcmp(argv[2], "-a"))
+        {
+            printf      ("Usage for param 2 <style> : write '-c' for ASCII Art or '-a' for Alphabetic");
+            return (2);
+        }
+        else
         {
             ft_strcpy   (label, argv[1]);
-        }
-        if(argv[2])
-        {   
-            ft_strcpy   (filename, argv[2]);
+            ft_strcpy   (style, argv[2]);
+            ft_strcpy   (filename, argv[3]);
         }
 
         len_label   =   cal_len_line    (label);
@@ -62,12 +67,12 @@ int     main        (int    argc, char  **argv)
 
         char    **ban          =   malloc(sizeof(char *) * 12);
         
-        test_memorie    ((void  *)  ban, "banniere");
+        //test_memorie    ((void  *)  ban, "banniere");
         
         for(int i = 0; i < 12; i++)
         {
             ban[i] =   malloc(sizeof(char) * (*len_header));
-            test_memorie    ((void  *)  ban[i], "banniere ligne");
+            //test_memorie    ((void  *)  ban[i], "banniere ligne");
         }
         printf      ("Label: %s\n", label);
 
@@ -78,10 +83,18 @@ int     main        (int    argc, char  **argv)
 
         printf      ("Nombre de caractere: %d\n", len_label);
         printf      ("Nombre de caractere du header: %d\n", *len_header);
+        printf      ("Style choisis: %s\n", style);
         printf      ("Filename: %s\n", filename);
         printf      ("Voiçi la bannière :\n");
 
-        creat_ban(label, &ban[0], len_label, len_header);
+        if(ft_strcmp(style, "-c"))
+        {
+            creat_ban_c     (label, &ban[0], len_label, len_header);
+        }
+        else
+        {
+            creat_ban_a     (label, &ban[0], len_label, len_header);
+        }
 
         show_ban    (&ban[0], len_header);
 
