@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 25/04/2023 15:02:06                                                                       */
-/*  Updated : 05/05/2023 16:21:40                                                                       */
+/*  Updated : 08/05/2023 14:20:51                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -57,7 +57,7 @@ int     main        (int    argc, char  **argv)
         }
 
         len_label   =   cal_len_line    (label);
-        cal_len_ban     (label, len_label, len_header);
+        *len_header =   cal_len_ban     (label, len_label);
 
         if(*len_header >= LEN_MAX_HEADER)
         {
@@ -87,14 +87,7 @@ int     main        (int    argc, char  **argv)
         printf      ("Filename: %s\n", filename);
         printf      ("Voiçi la bannière :\n");
 
-        if(ft_strcmp(style, "-c"))
-        {
-            creat_ban_c     (label, &ban[0], len_label, len_header);
-        }
-        else
-        {
-            creat_ban_a     (label, &ban[0], len_label, len_header);
-        }
+        creat_ban   (label, &ban[0], len_header, len_label);
 
         show_ban    (&ban[0], len_header);
 

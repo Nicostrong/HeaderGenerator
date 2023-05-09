@@ -17,24 +17,22 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 05/05/2023 17:01:50                                                                       */
-/*  Updated : 05/05/2023 17:02:12                                                                       */
+/*  Updated : 09/05/2023 13:03:25                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
 #include "libfx.h"
 
-const   int LEN_MAX_HEADER      =   120;
-
-void    ft_putchar                  (char   c)
+void    ft_putchar      (char c)
 {
-        write(1, &c, sizeof(char));
+        write           (1, &c, sizeof(char));
 }
 
-void    ft_putstr                   (char *str)
+void    ft_putstr       (char *str)
 {
-        int     i;
+        int i;
 
-         i  =   0;
+        i = 0;
 
         while(str[i] != '\0')
         {
@@ -43,22 +41,25 @@ void    ft_putstr                   (char *str)
         }
 }
 
-void    ft_strcpy                   (char   *dest, char  *src)
+void    ft_strcpy       (char *dest, char *src)
 {
-        int     i;
+        int i;
 
-        i   =   0;
+        i = 0;
 
         while(src[i] != '\0')
         {
-            dest[i] =   src[i];
+            dest[i]     =   src[i];
             i++;
         }
 }
 
-bool    ft_strcmp                   (char   *str1, char *str2)
+bool    ft_strcmp       (char *str1, char *str2)
 {
-        int i = 0;
+        int i;
+
+        i = 0;
+
         while (str1[i] != '\0' || str2[i] != '\0')
         {
             if (str1[i] != str2[i])
@@ -67,70 +68,103 @@ bool    ft_strcmp                   (char   *str1, char *str2)
             }
             i++;
         }
+
         return true;
 }
 
-int     cal_len_line                (char   *label)
+void    aff_label       (char *label, int len_label)
 {
-        char    *p  =   label; 
-        int     nombre;
+        printf          ("Label: %s\n", label);
 
-        nombre      =   0;
+        for(int i = 0; i < len_label; i++)
+        {
+            printf      ("caractere %d : %c\n", i,label[i]);
+        }
+}
+
+void    aff_nb_char     (int len_label)
+{
+        printf          ("Nombre de caractere: %d\n", len_label);
+}
+
+void    aff_len_ban     (int len_ban)
+{
+        printf          ("Nombre de caractere du header: %d\n", len_ban);
+}
+
+void    aff_style       (char *style)
+{
+        printf          ("Style choisis: %s\n", style);
+}
+
+void    aff_outfile     (char *filename)
+{
+        printf          ("Filename: %s\n", filename);
+}
+
+void    aff_ban         (char **ban, int len_header)
+{
+        printf          ("Voiçi la bannière :\n");
+        show_ban        (&ban[0], len_header);
+}
+        
+void    aff_regle       (int len_header)
+{
+        for(int i = 0; i < len_header; i++)
+            printf      ("%d", i%10);
+
+        printf          ("\n");
+}
+
+int     cal_len_line    (char *label)
+{
+        char *p = label; 
+        int nombre;
+
+        nombre = 0;
 
         while(*p)
         {
-                p++;
-                nombre++;
+            p++;
+            nombre++;
         }
 
         return (nombre);
 }
 
-void    add_char                    (char **ban, int ligne, int position, char c)
+int     cal_len_ban     (char *label, int len_label)
 {
-        ban[ligne][position] = c;
-}
+        int len_header;
 
-void    cal_len_ban                 (char *label, int len_label, int *len_header)
-{
-        *len_header  =   0;
+        len_header = 0;
 
-        for(int  j = 0; j < len_label; j++)
+        for(int j = 0; j < len_label; j++)
         {
             if(label[j] == ' ')
             {
-                *len_header +=  3;
+                len_header +=  3;
             }
             else if((label[j] >= 'A') && (label[j] <= 'Z'))
             {
-                int x   =   label[j] - 'A';
-                *len_header +=  (((Majuscule_C *) majuscules_C[x])->caractere) + 1;
+                int x = label[j] - 'A';
+                len_header += (((Majuscule_C *) majuscules_C[x])->caractere) + 1;
             }
             else if((label[j] >= 'a') && (label[j] <= 'z'))
             {
-                int x   =   label[j] - 'a';
-                *len_header +=  (((Minuscule_C *) minuscules_C[x])->caractere) + 1;
+                int x = label[j] - 'a';
+                len_header += (((Minuscule_C *) minuscules_C[x])->caractere) + 1;
             }
             else if((label[j] >= '0') && (label[j] <= '9'))
             {
-                int x   =   label[j] - '0';
-                *len_header +=  (((Chiffre_C *) chiffres_C[x])->caractere) + 1;
+                int x = label[j] - '0';
+                len_header += (((Chiffre_C *) chiffres_C[x])->caractere) + 1;
             }
             else
             {
-                printf("Erreur de caractere dans le label\n");
+                printf  ("Erreur de caractere dans le label\n");
             }
         }
-}
 
-void    test_memorie                (void   *var, char  *var_name)
-{
-        if(!var)
-        {
-            printf("Erreur d'allocution de la memoire pour la variable %s", var_name);
-            free(var);
-        }
-        else
-            printf("Allocation de mémoire pour la variable %s => OK\n", var_name);
+        return (len_header);
 }
 

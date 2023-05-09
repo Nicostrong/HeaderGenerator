@@ -17,13 +17,13 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 05/05/2023 17:02:39                                                                       */
-/*  Updated : 05/05/2023 17:02:56                                                                       */
+/*  Updated : 08/05/2023 14:20:36                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
 #include "libfx.h"
 
-void    creat_ban_c                 (char *label, char **ban, int len_label, int *len_header)
+void    creat_ban   (char *label, char **ban, int *len_header, int len_label)
 {
         int     cursor;
         int     i;
@@ -132,116 +132,12 @@ void    creat_ban_c                 (char *label, char **ban, int len_label, int
         }
 }
 
-void    creat_ban_a                 (char *label, char **ban, int len_label, int *len_header)
+void    add_char    (char **ban, int ligne, int position, char c)
 {
-        int     cursor;
-        int     i;
-        int     j;
-
-        cursor  =   0;
-        i       =   0;
-
-        for(i = 0; i < 12; i++)
-        {
-            for(j = 0; j < len_label; j++)
-            {
-                int     a;
-                int     x;
-                int     z;
-                char    *y  =   NULL;
-                
-                z       =   0;
-
-                if(label[j] >= 'A' && label[j] <= 'Z')
-                {
-                    if(label[j] == 'I')
-                    {
-                        x   =   label[j] - 'A';
-                        y   =   ((Majuscule_A_i *) majuscules_A[x])->rows[i][0];
-                        z   =   ((Majuscule_A_i *) majuscules_A[x])->caractere;
-                    }
-                    else if(label[j] == 'M')
-                    {
-                        x   =   label[j] - 'A';
-                        y   =   ((Majuscule_A_m *) majuscules_A[x])->rows[i][0];
-                        z   =   ((Majuscule_A_m *) majuscules_A[x])->caractere;
-                    }
-                    else if(label[j] == 'W')
-                    {
-                        x   =   label[j] - 'A';
-                        y   =   ((Majuscule_A_w *) majuscules_A[x])->rows[i][0];
-                        z   =   ((Majuscule_A_w *) majuscules_A[x])->caractere;
-                    }
-                    else
-                    {
-                        x   =   label[j] - 'A';
-                        y   =   ((Majuscule_A *) majuscules_A[x])->rows[i][0];
-                        z   =   ((Majuscule_A *) majuscules_A[x])->caractere;
-                    }
-                }
-                else if(label[j] >= 'a' && label[j] <= 'z')
-                {
-                    if(label[j] == 'i')
-                    {
-                        x   =   label[j] - 'a';
-                        y   =   ((Minuscule_A_i *) minuscules_A[x])->rows[i][0];
-                        z   =   ((Minuscule_A_i *) minuscules_A[x])->caractere;
-                    }
-                    else if(label[j] == 'm')
-                    {
-                        x   =   label[j] - 'a';
-                        y   =   ((Minuscule_A_m *) minuscules_A[x])->rows[i][0];
-                        z   =   ((Minuscule_A_m *) minuscules_A[x])->caractere;
-                    }
-                    else if(label[j] == 'w')
-                    {
-                        x   =   label[j] - 'a';
-                        y   =   ((Minuscule_A_w *) minuscules_A[x])->rows[i][0];
-                        z   =   ((Minuscule_A_w *) minuscules_A[x])->caractere;
-                    }
-                    else
-                    {
-                        x   =   label[j] - 'a';
-                        y   =   ((Minuscule_A *) minuscules_A[x])->rows[i][0];
-                        z   =   ((Minuscule_A *) minuscules_A[x])->caractere;
-                    }
-                }
-                else if(label[j] >= '0' && label[j] <= '9')
-                {
-                    x   =   label[j] - '0';
-                    y   =   ((Chiffre_N *) chiffres_N[x])->rows[i][0];
-                    z   =   ((Chiffre_N *) chiffres_N[x])->caractere;
-                }
-                else if(label[j] == ' ')
-                {
-                    y   =   "  ";
-                    z   =   2;
-                }
-                else
-                {
-                    printf("Erreur de caractere dans le label non pris en charge\n");
-                }
-                
-                for(a = 0; a < z; a++)
-                {
-                    add_char(ban, i, cursor, y[a]);
-                    cursor++;
-                }
-
-                add_char(ban, i, cursor, ' ');
-                cursor++;
-
-                if (cursor == *len_header)
-                {
-                    add_char(ban, i, *len_header, '\0');
-                    cursor  =   0;
-                    break;
-                }
-            }
-        }
+        ban[ligne][position] = c;
 }
 
-void    show_ban                    (char  **ban, int   *len_header)
+void    show_ban    (char  **ban, int   *len_header)
 {
         for(int i = 0; i < 12; i++)
         {
