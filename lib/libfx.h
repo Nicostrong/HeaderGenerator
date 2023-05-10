@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 05/05/2023 16:12:25                                                                       */
-/*  Updated : 10/05/2023 10:39:36                                                                       */
+/*  Updated : 10/05/2023 16:24:58                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -65,12 +65,29 @@ int     cal_len_ban             (char *label, int len_label);
 
 extern  const   int LEN_MAX_HEADER;
 
-void    show_ban                (char **ban, int len_header);
+char    *fonction_maj_1         (char lettre, int position, int ligne);
+
+int     fonction_maj_2         (char lettre, int position);
+    
+char    *fonction_maj_3         (char lettre, int position, int ligne);
+
+int     fonction_maj_4         (char lettre, int position);
+    
+char    *fonction_min_1         (char lettre, int position, int ligne);
+
+int     fonction_min_2         (char lettre, int position);
+    
+char    *fonction_min_3         (char lettre, int position, int ligne);
+
+int     fonction_min_4         (char lettre, int position);
+    
+void    creat_ban               (char *label, char **ban, char *style, int *len_header, int len_label);
 
 void    add_char                (char **ban, int line, int position, char c);
 
-void    creat_ban               (char *label, char **ban, int *len_header, int len_label);
+void    show_ban                (char **ban, int len_header);
 
+void    creat_ban_copy          (char *label, char **ban, char *style, int *len_header, int len_label);
 
 // fx_frame.c
 
