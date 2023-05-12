@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 05/05/2023 16:12:25                                                                       */
-/*  Updated : 12/05/2023 10:50:19                                                                       */
+/*  Updated : 12/05/2023 10:54:19                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -86,7 +86,7 @@ void    recup_ascii_ch          (char *style, char **char_lettre, int *nb_char_l
 
 void    format_line_ban         (char **ban, char *char_lettre, int *nb_char_lettre, int *cursor, int ligne, int len_header);
 
-void    creat_ban               (char *label, char **ban, char *style,/* int *len_header,*/ int len_label, int *error);
+void    creat_ban               (char *label, char **ban, char *style, int len_label, int *error);
 
 void    add_char_ban            (char **ban, int line, int position, char c);
 

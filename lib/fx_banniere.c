@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 05/05/2023 17:02:39                                                                       */
-/*  Updated : 12/05/2023 10:51:58                                                                       */
+/*  Updated : 12/05/2023 10:55:28                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -167,7 +167,7 @@ void    format_line_ban (char **ban, char *char_lettre, int *nb_char_lettre, int
         }
 }
 
-void    creat_ban   (char *label, char **ban, char *style,/* int *len_header,*/ int len_label, int *error)
+void    creat_ban   (char *label, char **ban, char *style, int len_label, int *error)
 {
         int     *cursor             =   malloc(sizeof(int));
         int     ligne;

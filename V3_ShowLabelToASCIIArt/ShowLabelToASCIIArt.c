@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 25/04/2023 15:02:06                                                                       */
-/*  Updated : 11/05/2023 16:11:18                                                                       */
+/*  Updated : 12/05/2023 10:55:02                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -89,7 +89,6 @@ int     main        (int    argc, char  **argv)
         aff_outfile (filename);
 
         creat_ban   (label, &ban[0], style, len_label, error);
-        //creat_ban_copy  (label, &ban[0], style, len_header, len_label);
 
         aff_ban     (ban, *len_header);
         aff_regle   (*len_header);
