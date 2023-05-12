@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 24/04/2023 15:39:48                                                                       */
-/*  Updated : 05/05/2023 15:56:43                                                                       */
+/*  Updated : 12/05/2023 17:48:46                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -26,89 +26,120 @@
 
 #include <stdio.h>
 
-// Fonctions des lettres majuscules en ASCII Art
+/*
+ * <summary>
+ *  Fonctions de majuscule_c.c
+ * </summary>
+ *
+ * <remarks>
+ *  Structures des lettres majuscules en ASCII Art
+ * </remarks>
+ *
+ */
 
-struct  Majuscule_C             {
-                                int     caractere;
-                                char    *rows[12][9];
-                                };
+    struct  Majuscule_C             {
+                                    int     caractere;
+                                    char    *rows[12][9];
+                                    };
 
-typedef struct  Majuscule_C     Majuscule_C;
+    typedef struct  Majuscule_C     Majuscule_C;
 
-void    afficher_majuscule_C    (Majuscule_C    *numero_lettre_majuscule);
+    struct  Majuscule_C_i           {
+                                    int     caractere;
+                                    char    *rows[12][7];
+                                    };
 
-struct  Majuscule_C_i           {
-                                int     caractere;
-                                char    *rows[12][7];
-                                };
+    typedef struct  Majuscule_C_i   Majuscule_C_i;
 
-typedef struct  Majuscule_C_i   Majuscule_C_i;
+    struct  Majuscule_C_m           {
+                                    int     caractere;
+                                    char    *rows[12][13];
+                                    };
 
-void    afficher_majuscule_C_i  (Majuscule_C_i  *numero_lettre_majuscule);
+    typedef struct  Majuscule_C_m   Majuscule_C_m;
 
-struct  Majuscule_C_m           {
-                                int     caractere;
-                                char    *rows[12][13];
-                                };
+    struct  Majuscule_C_w           {
+                                    int     caractere;
+                                    char    *rows[12][16];
+                                    };
 
-typedef struct  Majuscule_C_m   Majuscule_C_m;
+    typedef struct  Majuscule_C_w   Majuscule_C_w;
 
-void    afficher_majuscule_C_m  (Majuscule_C_m  *numero_lettre_majuscule);
+    const   void                    *majuscules_C[26];
 
-struct  Majuscule_C_w           {
-                                int     caractere;
-                                char    *rows[12][16];
-                                };
+/*
+ * <summary>
+ *  Fonctions de majuscule_a.c
+ * </summary>
+ *
+ * <remarks>
+ *  Structures des lettres majuscules en Alphachar
+ * </remarks>
+ *
+ */
 
-typedef struct  Majuscule_C_w   Majuscule_C_w;
+    struct  Majuscule_A             {
+                                    int     caractere;
+                                    char    *rows[12][9];
+                                    };
 
-void    afficher_majuscule_C_w  (Majuscule_C_w  *numero_lettre_majuscule);
+    typedef struct  Majuscule_A     Majuscule_A;
 
-const   void                    *majuscules_C[26];
+    struct  Majuscule_A_i           {
+                                    int     caractere;
+                                    char    *rows[12][7];
+                                    };
 
-void    afficher_maj_C          (void   *numero_lettre_majuscule);
+    typedef struct  Majuscule_A_i   Majuscule_A_i;
 
-// Fonctions des lettres majuscules en alpha
+    struct  Majuscule_A_m           {
+                                    int     caractere;
+                                    char    *rows[12][13];
+                                    };
 
-struct  Majuscule_A             {
-                                int     caractere;
-                                char    *rows[12][9];
-                                };
+    typedef struct  Majuscule_A_m   Majuscule_A_m;
 
-typedef struct  Majuscule_A     Majuscule_A;
+    struct  Majuscule_A_w           {
+                                    int     caractere;
+                                    char    *rows[12][16];
+                                    };
 
-void    afficher_majuscule_A    (Majuscule_A    *numero_lettre_majuscule);
+    typedef struct  Majuscule_A_w   Majuscule_A_w;
 
-struct  Majuscule_A_i           {
-                                int     caractere;
-                                char    *rows[12][7];
-                                };
+    const   void                    *majuscules_A[26];
 
-typedef struct  Majuscule_A_i   Majuscule_A_i;
+/*
+ * <summary>
+ *  Fonctions de majuscule_fx.c
+ * </summary>
+ *
+ * <remarks>
+ *  Fonctions gerant l'affichage des lettres majuscules
+ *      en ASCII Art
+ *      en Alphachar
+ * </remarks>
+ *
+ */
 
-void    afficher_majuscule_A_i  (Majuscule_A_i  *numero_lettre_majuscule);
+    void    afficher_majuscule_C    (Majuscule_C    *numero_lettre_majuscule);
+    
+    void    afficher_majuscule_C_i  (Majuscule_C_i  *numero_lettre_majuscule);
+    
+    void    afficher_majuscule_C_m  (Majuscule_C_m  *numero_lettre_majuscule);
+    
+    void    afficher_majuscule_C_w  (Majuscule_C_w  *numero_lettre_majuscule);
+    
+    void    afficher_maj_C          (void   *numero_lettre_majuscule);
 
-struct  Majuscule_A_m           {
-                                int     caractere;
-                                char    *rows[12][13];
-                                };
+    void    afficher_majuscule_A    (Majuscule_A    *numero_lettre_majuscule);
+    
+    void    afficher_majuscule_A_i  (Majuscule_A_i  *numero_lettre_majuscule);
+    
+    void    afficher_majuscule_A_m  (Majuscule_A_m  *numero_lettre_majuscule);
+    
+    void    afficher_majuscule_A_w  (Majuscule_A_w  *numero_lettre_majuscule);
 
-typedef struct  Majuscule_A_m   Majuscule_A_m;
-
-void    afficher_majuscule_A_m  (Majuscule_A_m  *numero_lettre_majuscule);
-
-struct  Majuscule_A_w           {
-                                int     caractere;
-                                char    *rows[12][16];
-                                };
-
-typedef struct  Majuscule_A_w   Majuscule_A_w;
-
-void    afficher_majuscule_A_w  (Majuscule_A_w  *numero_lettre_majuscule);
-
-const   void                    *majuscules_A[26];
-
-void    afficher_maj_A          (void   *numero_lettre_majuscule);
+    void    afficher_maj_A          (void   *numero_lettre_majuscule);
 
 #endif
 

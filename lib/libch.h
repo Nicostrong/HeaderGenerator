@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 24/04/2023 15:48:40                                                                       */
-/*  Updated : 08/05/2023 14:24:16                                                                       */
+/*  Updated : 12/05/2023 17:25:14                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -26,31 +26,60 @@
 
 #include <stdio.h>
 
-// Fonctions des chiffre en ASCII art
+/*
+ * <summary>
+ *  Fonctions de chiffre_c.c
+ * </summary>
+ *
+ * <remarks>
+ *  Structure des chiffres en caractere ASCII Art
+ * </remarks>
+ *
+ */
 
-struct  Chiffre_C               {
-                                int     caractere;
-                                char    *rows[12][9];
-                                };
+    struct  Chiffre_C               {
+                                    int     caractere;
+                                    char    *rows[12][9];
+                                    };
 
-typedef struct  Chiffre_C       Chiffre_C;
+    typedef struct  Chiffre_C       Chiffre_C;
 
-const   Chiffre_C               *chiffres_C[10];
+    const   Chiffre_C               *chiffres_C[10];
 
-void    afficher_chiffre_C      (Chiffre_C  *chiffre);
+/*
+ * <summary>
+ *  Fonctions de chiffre_n.c
+ * </summary>
+ *
+ * <remarks>
+ *  Structure des chiffres en caractere numerique
+ * </remarks>
+ *
+ */
 
-// Fonctions des chiffre en numerique
+    struct  Chiffre_N               {
+                                    int     caractere;
+                                    char    *rows[12][9];
+                                    };
 
-struct  Chiffre_N               {
-                                int     caractere;
-                                char    *rows[12][9];
-                                };
+    typedef struct  Chiffre_N       Chiffre_N;
 
-typedef struct  Chiffre_N       Chiffre_N;
+    const   Chiffre_N               *chiffres_N[10];
 
-const   Chiffre_N               *chiffres_N[10];
+/*
+ * <summary>
+ *  Fonctions de chiffre_fx.c
+ * </summary>
+ *
+ * <remarks>
+ *  fonctions d'affichage des chiffres
+ * </remarks>
+ *
+ */
 
-void    afficher_chiffre_N      (Chiffre_N  *chiffre);
+    void    afficher_chiffre_C      (Chiffre_C  *chiffre);
+
+    void    afficher_chiffre_N      (Chiffre_N  *chiffre);
 
 #endif
 
