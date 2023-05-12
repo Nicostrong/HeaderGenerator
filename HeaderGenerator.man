@@ -1,0 +1,49 @@
+
+NAME
+     Headergenerator – personal header for source code 
+
+SYNOPSIS
+     Headergenerator [label] [-style] [filename]
+     Headergenerator [-Sall]
+     Headergenerator [-Sch] [-style]
+     Headergenerator [-Smaj] [-style]
+     Headergenerator [-Smin] [-style]
+
+DESCRIPTION
+    Headergenerator a ete concu pour inserer une banniere personnalise dans vos fichier code source.
+
+    Son utilisation est tres simple, il prend en parametre :
+
+    [label]     =>  un label que vous souhaitez afficher en grand dans la baniere.
+
+    [-style]    =>  le style se resume en deux options:
+                    [-c]    =>  pour afficher la banniere en caracteres ASCII Art
+                    [-a]    =>  pour afficher la banniere en caracteres alpha.
+
+    [filename]  =>  nom de votre fichier code source avec son extension dans lequel la banniere sera inseree.
+
+    [-Sall]     =>  Avec cette option vous aurez un apercu complet des librairies a votre disposition pour la creation de la banniere.
+
+    [-SLch]     =>  Cette option, affiche tout les chiffres disponible.
+                    Si on couple cette option avec l'option [-style] nous affichons que les chiffres dans le style choisis. 
+
+    [-SLmaj]    =>  Cette option, affiche tout les caracteres majuscule a votre disposition pour afficher le label.
+                    Si on couple cette option avec l'option[-style], nous afficherons les caracteres majuscules dans le style choisis.
+
+    [-SLmin]    =>  Cette option, affiche tout les caracteres minuscule a votre disposition pour afficher le label.
+                    Si on couple cette option avec l'option [-style], nous afficherons les caracteres minuscules dans le style choisis.
+
+SEE ALSO
+
+HISTORY
+    La V1 de ce programme affiche les bibliotheques a notre disposition, pour creer notre header.
+
+    La V2 prend en compte les arguments passe en parametre.
+
+    La V3 affiche notre banniere personnalisee en prenant en compte le style choisis.
+
+BUGS
+    Il peut y avoir des bugs malgres les tests effectues a la production de ce programme.
+
+    Merci de rapporter tout bug a cette adresse <bugs.headergenerator@gmail.com>
+
