@@ -12,6 +12,7 @@ SYNOPSIS
 DESCRIPTION
     Headergenerator a ete concu pour inserer une banniere personnalise dans vos fichier code source.
 
+OPTIONS
     Son utilisation est tres simple, il prend en parametre :
 
     [label]     =>  un label que vous souhaitez afficher en grand dans la baniere.
@@ -19,6 +20,7 @@ DESCRIPTION
     [-style]    =>  le style se resume en deux options:
                     [-c]    =>  pour afficher la banniere en caracteres ASCII Art
                     [-a]    =>  pour afficher la banniere en caracteres alpha.
+
 
     [filename]  =>  nom de votre fichier code source avec son extension dans lequel la banniere sera inseree.
 
@@ -33,7 +35,12 @@ DESCRIPTION
     [-SLmin]    =>  Cette option, affiche tout les caracteres minuscule a votre disposition pour afficher le label.
                     Si on couple cette option avec l'option [-style], nous afficherons les caracteres minuscules dans le style choisis.
 
-SEE ALSO
+EXEMPLES
+    Headergenerator "Nico 54" -c main.c
+        =>  generera un header avec comme label "Nico 54" affiché en caracteres ASCII Art.
+
+    Headergenrator -Sch -a
+        =>  affichera tout les chiffres de 0 -> 9 en caracteres numerique c-a-d pour le chiffre 4 : compose que de chiffre 4.
 
 HISTORY
     La V1 de ce programme affiche les bibliotheques a notre disposition, pour creer notre header.
