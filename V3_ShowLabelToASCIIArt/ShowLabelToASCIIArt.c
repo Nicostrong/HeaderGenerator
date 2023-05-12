@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 25/04/2023 15:02:06                                                                       */
-/*  Updated : 10/05/2023 16:16:29                                                                       */
+/*  Updated : 11/05/2023 16:11:18                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -35,15 +35,19 @@ int     main        (int    argc, char  **argv)
         int     *error              =   malloc(sizeof(int));
         int     len_label;
 
-        //test_memorie    ((void  *)  label, "label");
-        //test_memorie    ((void  *)  filename, "filename");
-        //test_memorie    ((void  *)  style, "Style d'écriture");
-        //test_memorie    ((void  *)  len_header, "longueur header");
+        test_memorie    ((void  *)  label, "label", error);
+        test_memorie    ((void  *)  filename, "filename", error);
+        test_memorie    ((void  *)  style, "Style d'écriture", error);
+        test_memorie    ((void  *)  len_header, "longueur header", error);
+
+        // Traitement des arguments
 
         test_arg(argc, argv, error);
-
         if((*error == ERROR_NB_ARG) || (*error == ERROR_ARG_2))
+        {
+            free_memorie    (5,label, filename, style, len_header, error);
             return (1);
+        }
         else
         {
             ft_strcpy   (label, argv[1]);
@@ -56,20 +60,26 @@ int     main        (int    argc, char  **argv)
 
         test_label(label, error);
         if(*error == ERROR_CHAR_LABEL)
+        {
+            free_memorie    (5,label, filename, style, len_header, error);
             return (1);
+        }
 
         test_len_ban(len_header, error);
         if(*error == ERROR_LEN_BAN)
+        {
+            free_memorie    (5,label, filename, style, len_header, error);
             return (1);
+        }
 
         char    **ban          =   malloc(sizeof(char *) * 12);
         
-        //test_memorie    ((void  *)  ban, "banniere");
+        test_memorie    ((void  *)  ban, "banniere", error);
         
         for(int i = 0; i < 12; i++)
         {
             ban[i] =   malloc(sizeof(char) * (*len_header));
-            //test_memorie    ((void  *)  ban[i], "banniere ligne");
+            test_memorie    ((void  *)  ban[i], "banniere ligne", error);
         }
 
         aff_label   (label, len_label);
@@ -78,21 +88,16 @@ int     main        (int    argc, char  **argv)
         aff_style   (style);
         aff_outfile (filename);
 
-        //creat_ban   (label, &ban[0], style, len_header, len_label);
-        creat_ban_copy  (label, &ban[0], style, len_header, len_label);
-        //show_ban    (&ban[0], *len_header);
+        creat_ban   (label, &ban[0], style, len_label, error);
+        //creat_ban_copy  (label, &ban[0], style, len_header, len_label);
 
         aff_ban     (ban, *len_header);
         aff_regle   (*len_header);
 
-        free    (label);
-        free    (filename);
-        free    (len_header);
-
         for(int i = 0; i < 12; i++)
            free (ban[i]);
     
-        free    (ban);
+        free_memorie    (6,label, filename, style, len_header, error, ban);
 
         return (0);
 }

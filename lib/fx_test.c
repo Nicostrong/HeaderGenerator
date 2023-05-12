@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 09/05/2023 09:53:08                                                                       */
-/*  Updated : 10/05/2023 10:15:40                                                                       */
+/*  Updated : 11/05/2023 10:49:20                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -74,5 +74,19 @@ void    test_len_ban    (int *len_header, int *error)
             printf("La banniere est limite a 120 caracteres\n");
             *error  =   ERROR_LEN_BAN;
         }
+}
+
+void    free_memorie    (int count, ...)
+{
+        va_list args;
+        va_start(args, count);
+
+        for(int i = 0; i < count; i++)
+        {
+            void    *ptr = va_arg(args, void *);
+            free    (ptr);
+        }
+
+        va_end(args);
 }
 

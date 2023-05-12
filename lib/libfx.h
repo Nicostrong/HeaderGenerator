@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 05/05/2023 16:12:25                                                                       */
-/*  Updated : 10/05/2023 16:24:58                                                                       */
+/*  Updated : 12/05/2023 10:50:19                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -29,6 +29,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <stdbool.h>
+#include <stdarg.h>
 #include "libmin.h"
 #include "libmaj.h"
 #include "libch.h"
@@ -65,29 +66,31 @@ int     cal_len_ban             (char *label, int len_label);
 
 extern  const   int LEN_MAX_HEADER;
 
-char    *fonction_maj_1         (char lettre, int position, int ligne);
+char    *copy_char_maj_C        (char lettre, int position, int ligne);
 
-int     fonction_maj_2         (char lettre, int position);
+char    *copy_char_maj_A        (char lettre, int position, int ligne);
+
+int     copy_nb_char_maj        (char lettre, int position);
+
+char    *copy_char_min_C        (char lettre, int position, int ligne);
+
+char    *copy_char_min_A        (char lettre, int position, int ligne);
+
+int     copy_nb_char_min        (char lettre, int position);
     
-char    *fonction_maj_3         (char lettre, int position, int ligne);
+void    recup_ascii_maj         (char *style, char **char_lettre, int *nb_char_lettre, char lettre, int ligne);
 
-int     fonction_maj_4         (char lettre, int position);
-    
-char    *fonction_min_1         (char lettre, int position, int ligne);
+void    recup_ascii_min         (char *style, char **char_lettre, int *nb_char_lettre, char lettre, int ligne);
 
-int     fonction_min_2         (char lettre, int position);
-    
-char    *fonction_min_3         (char lettre, int position, int ligne);
+void    recup_ascii_ch          (char *style, char **char_lettre, int *nb_char_lettre, char lettre, int ligne);
 
-int     fonction_min_4         (char lettre, int position);
-    
-void    creat_ban               (char *label, char **ban, char *style, int *len_header, int len_label);
+void    format_line_ban         (char **ban, char *char_lettre, int *nb_char_lettre, int *cursor, int ligne, int len_header);
 
-void    add_char                (char **ban, int line, int position, char c);
+void    creat_ban               (char *label, char **ban, char *style,/* int *len_header,*/ int len_label, int *error);
+
+void    add_char_ban            (char **ban, int line, int position, char c);
 
 void    show_ban                (char **ban, int len_header);
-
-void    creat_ban_copy          (char *label, char **ban, char *style, int *len_header, int len_label);
 
 // fx_frame.c
 
@@ -111,6 +114,8 @@ void    test_label              (char *label, int *error);
 void    test_arg                (int argc, char **argv, int *error);
 
 void    test_len_ban            (int *len_header, int *error);
+
+void    free_memorie            (int count, ...);
 
 #endif
 
