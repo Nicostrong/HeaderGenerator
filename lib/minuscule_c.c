@@ -17,11 +17,33 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:02:56                                                                       */
-/*  Updated : 12/05/2023 11:25:43                                                                       */
+/*  Updated : 15/05/2023 11:44:26                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
 #include "libmin.h"
+
+/*
+ * <summary>
+ *  Structure des minuscule en ASCII Art
+ * </summary>
+ *
+ * <remarks>
+ *  Structure composee de deux elements
+ *  Minuscule_C :
+ *      rows[12][9] => 8 + '\0'
+ *  Minuscule_C_i :
+ *      rows[12][7] => 6 + '\0'
+ *  Minuscule_C_m :
+ *      rows[12][13] => 12 + '\0'
+ *  Minuscule_C_w :
+ *      rows[12][16] => 15 + '\0'
+ * </remarks>
+ *
+ * <param type="int" name="caractere">Nombre de caractere par ligne</param>
+ * <param type="char *" name="rows">tableau de pointeur de caractere de 12 lignes et de x caracteres de long</param>
+ *
+ */
 
 const   Minuscule_C     a_c =   {
     .caractere  =   8,
@@ -464,6 +486,17 @@ const   Minuscule_C     z_c =   {
         {"        "},
         {"        "}}
 };
+
+/*
+ * <summary>
+ *  Tableau de pointeurs de minuscule_C
+ * </summary>
+ *
+ * <remarks>
+ *  Tableau de pointeurs pointant vers les differentes structures de Minuscule_C
+ * </remarks>
+ *
+ */
 
 const   void    *minuscules_C[26]   =   {&a_c, &b_c, &c_c, &d_c, &e_c,
                                         &f_c, &g_c, &h_c, &i_c, &j_c,

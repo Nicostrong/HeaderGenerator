@@ -17,13 +17,34 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:14:16                                                                       */
-/*  Updated : 05/05/2023 14:59:28                                                                       */
+/*  Updated : 15/05/2023 11:48:22                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
 #include "libmaj.h"
 
-// le caractere @ indique la prolongation du caractere suivant ou precedent 
+/*
+ * <summary>
+ *  Structure des majuscule en ASCII Art
+ * </summary>
+ *
+ * <remarks>
+ *  Structure composee de deux elements
+ *  Majuscule_C :
+ *      rows[12][9] => 8 + '\0'
+ *  Majuscule_C_i :
+ *      rows[12][7] => 6 + '\0'
+ *  Majuscule_C_m :
+ *      rows[12][13] => 12 + '\0'
+ *  Majuscule_C_w :
+ *      rows[12][16] => 15 + '\0'
+ *  Le caractere '@' indique une prolongation du caractere ASCII
+ * </remarks>
+ *
+ * <param type="int" name="caractere">Nombre de caractere par ligne</param>
+ * <param type="char *" name="rows">tableau de pointeur de caractere de 12 lignes et de x caracteres de long</param>
+ *
+ */
 
 const   Majuscule_C     A_c =   {
     .caractere  =   8,
@@ -466,6 +487,17 @@ const   Majuscule_C     Z_c =   {
         {"##      "},
         {"#######@"}}
 };
+
+/*
+ * <summary>
+ *  Tableau de pointeurs de majuscule_C
+ * </summary>
+ *
+ * <remarks>
+ *  Tableau de pointeurs pointant vers les differentes structures de Majuscule_C
+ * </remarks>
+ *
+ */
 
 const   void    *majuscules_C[26]   =   {&A_c, &B_c, &C_c, &D_c, &E_c, &F_c,
                                         &G_c, &H_c, &I_c, &J_c, &K_c, &L_c,

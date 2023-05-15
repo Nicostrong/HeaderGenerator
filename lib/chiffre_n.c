@@ -17,11 +17,26 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 17/04/2023 20:46:41                                                                       */
-/*  Updated : 26/04/2023 10:45:34                                                                       */
+/*  Updated : 15/05/2023 11:36:48                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
 #include "libch.h"
+
+/*
+ * <summary>
+ *  Structure des chiffres en Numerique
+ * </summary>
+ *
+ * <remarks>
+ *  Structure composee de deux elements
+ *  rows[12][9] => 8 + '\0'
+ * </remarks>
+ *
+ * <param type="int" name="caractere">Nombre de caractere par ligne</param>
+ * <param type="char *" name="rows">tableau de pointeur de caractere de 12 lignes et de 9 caracteres de long</param>
+ *
+ */
 
 const   Chiffre_N   zero_n      =   {
     .caractere  =   8,
@@ -192,6 +207,17 @@ const   Chiffre_N   neuf_n      =   {
         {"        "},
         {"        "}}
 };
+
+/*
+ * <summary>
+ *  Tableau de pointeurs de chiffre_N
+ * </summary>
+ *
+ * <remarks>
+ *  Tableau de pointeurs pointant vers les differentes structures de Chiffre_N
+ * </remarks>
+ *
+ */
 
 const   Chiffre_N   *chiffres_N[10]     =   {&zero_n, &un_n, &deux_n, &trois_n, &quatre_n,
                                             &cinq_n, &six_n, &sept_n, &huit_n, &neuf_n};

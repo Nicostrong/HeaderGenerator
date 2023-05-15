@@ -17,13 +17,34 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:14:16                                                                       */
-/*  Updated : 05/05/2023 14:59:26                                                                       */
+/*  Updated : 15/05/2023 11:48:18                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
 #include "libmaj.h"
 
-// le caractere @ indique la prolongation du caractere suivant ou precedent 
+/*
+ * <summary>
+ *  Structure des majuscule en Alpha
+ * </summary>
+ *
+ * <remarks>
+ *  Structure composee de deux elements
+ *  Majuscule_A :
+ *      rows[12][9] => 8 + '\0'
+ *  Majuscule_A_i :
+ *      rows[12][7] => 6 + '\0'
+ *  Majuscule_A_m :
+ *      rows[12][13] => 12 + '\0'
+ *  Majuscule_A_w :
+ *      rows[12][16] => 15 + '\0'
+ *  Le caractere '@' indique une prolongation du caractere Alpha
+ * </remarks>
+ *
+ * <param type="int" name="caractere">Nombre de caractere par ligne</param>
+ * <param type="char *" name="rows">tableau de pointeur de caractere de 12 lignes et de x caracteres de long</param>
+ *
+ */
 
 const   Majuscule_A     A_a =   {
     .caractere  =   8,
@@ -466,6 +487,17 @@ const   Majuscule_A     Z_a =   {
         {"ZZ      "},
         {"ZZZZZZZ@"}}
 };
+
+/*
+ * <summary>
+ *  Tableau de pointeurs de majuscule_A
+ * </summary>
+ *
+ * <remarks>
+ *  Tableau de pointeurs pointant vers les differentes structures de Majuscule_A
+ * </remarks>
+ *
+ */
 
 const   void    *majuscules_A[26]   =   {&A_a, &B_a, &C_a, &D_a, &E_a, &F_a,
                                         &G_a, &H_a, &I_a, &J_a, &K_a, &L_a,

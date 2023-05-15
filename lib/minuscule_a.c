@@ -17,11 +17,33 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:02:56                                                                       */
-/*  Updated : 12/05/2023 11:25:41                                                                       */
+/*  Updated : 15/05/2023 11:43:19                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
 #include "libmin.h"
+
+/*
+ * <summary>
+ *  Structure des minuscule en Alpha
+ * </summary>
+ *
+ * <remarks>
+ *  Structure composee de deux elements
+ *  Minuscule_A :
+ *      rows[12][9] => 8 + '\0'
+ *  Minuscule_A_i :
+ *      rows[12][7] => 6 + '\0'
+ *  Minuscule_A_m :
+ *      rows[12][13] => 12 + '\0'
+ *  Minuscule_A_w :
+ *      rows[12][16] => 15 + '\0'
+ * </remarks>
+ *
+ * <param type="int" name="caractere">Nombre de caractere par ligne</param>
+ * <param type="char *" name="rows">tableau de pointeur de caractere de 12 lignes et de x caracteres de long</param>
+ *
+ */
 
 const   Minuscule_A     a_a =   {
     .caractere  =   8,
@@ -464,6 +486,17 @@ const   Minuscule_A     z_a =   {
         {"        "},
         {"        "}}
 };
+
+/*
+ * <summary>
+ *  Tableau de pointeurs de minuscule_A
+ * </summary>
+ *
+ * <remarks>
+ *  Tableau de pointeurs pointant vers les differentes structures de Minuscule_A
+ * </remarks>
+ *
+ */
 
 const   void    *minuscules_A[26]   =   {&a_a, &b_a, &c_a, &d_a, &e_a,
                                         &f_a, &g_a, &h_a, &i_a, &j_a,

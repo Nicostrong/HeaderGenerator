@@ -17,11 +17,26 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 15/04/2023 14:23:56                                                                       */
-/*  Updated : 26/04/2023 10:45:35                                                                       */
+/*  Updated : 15/05/2023 11:41:09                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
 #include "libch.h"
+
+/*
+ * <summary>
+ *  Structure des chiffres en ASCII Art
+ * </summary>
+ *
+ * <remarks>
+ *  Structure composee de deux elements
+ *  rows[12][9] => 8 + '\0'
+ * </remarks>
+ *
+ * <param type="int" name="caractere">Nombre de caractere par ligne</param>
+ * <param type="char *" name="rows">tableau de pointeur de caractere de 12 lignes et de 9 caracteres de long</param>
+ *
+ */
 
 const   Chiffre_C   zero_c      =   {
     .caractere  =   8,
@@ -192,6 +207,17 @@ const   Chiffre_C   neuf_c      =   {
         {"        "},
         {"        "}}
 };
+
+/*
+ * <summary>
+ *  Tableau de pointeurs de chiffre_C
+ * </summary>
+ *
+ * <remarks>
+ *  Tableau de pointeurs pointant vers les differentes structures de Chiffre_C
+ * </remarks>
+ *
+ */
 
 const   Chiffre_C   *chiffres_C[10]     =   {&zero_c, &un_c, &deux_c, &trois_c, &quatre_c,
                                             &cinq_c, &six_c, &sept_c, &huit_c, &neuf_c};
