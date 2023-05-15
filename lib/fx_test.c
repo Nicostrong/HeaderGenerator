@@ -17,11 +17,31 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 09/05/2023 09:53:08                                                                       */
-/*  Updated : 11/05/2023 10:49:20                                                                       */
+/*  Updated : 15/05/2023 15:37:40                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
 #include "libfx.h"
+
+/*
+ * <summary>
+ *  void    test_memorie 
+ * </summary>
+ *
+ * <remarks>
+ *  Verifie si l'allocution de memoire a fonctionne
+ * </remarks>
+ *
+ * <param type="void *" name="var">adresse du pointeur</param>
+ * <param type="char *" name="var_name">nom du pointeur</param>
+ * <param type="int *" name="error">numero de l'erreur</param>
+ *
+ * <subfunction>
+ *  printf
+ *  free
+ * </subfunction>
+ *
+ */
 
 void    test_memorie    (void *var, char *var_name, int *error)
 {
@@ -33,6 +53,24 @@ void    test_memorie    (void *var, char *var_name, int *error)
             *error  =    ERROR_ALLOC_MEM;
         }
 }
+
+/*
+ * <summary>
+ *  void    test_label
+ * </summary>
+ *
+ * <remarks>
+ *  Verifie si le label est constitue de caracteres valide
+ * </remarks>
+ *
+ * <param type="char *" name="label">label de la banniere</param>
+ * <param type="int *" name="error">numero de l'erreur</param>
+ *
+ * <subfunction>
+ *  printf
+ * </subfunction>
+ *
+ */
 
 void    test_label      (char *label, int *error)
 {
@@ -50,6 +88,25 @@ void    test_label      (char *label, int *error)
         }
 }
 
+/*
+ * <summary>
+ *  void    test_arg
+ * </summary>
+ *
+ * <remarks>
+ *  Verifie le nombre d'argument et la conformite du deuxieme argument
+ * </remarks>
+ *
+ * <param type="int *" name="argc">nombre d'argument</param>
+ * <param type="char **" name="argv">tableau d'arguments</param>
+ * <param type="int *" name="error">numero de l'erreur</param>
+ *
+ * <subfunction>
+ *  printf
+ * </subfunction>
+ *
+ */
+
 void    test_arg        (int argc, char **argv, int *error)
 {
         if(argc < 4)
@@ -66,6 +123,24 @@ void    test_arg        (int argc, char **argv, int *error)
         }
 }
 
+/*
+ * <summary>
+ *  void    test_len_ban
+ * </summary>
+ *
+ * <remarks>
+ *  Verifie si la banniere ne depasse pas la longueur maxi avant la creation de celle-ci
+ * </remarks>
+ *
+ * <param type="int *" name="len_header">nombre de caractere du header</param>
+ * <param type="int *" name="error">numero de l'erreur</param>
+ *
+ * <subfunction>
+ *  printf
+ * </subfunction>
+ *
+ */
+
 void    test_len_ban    (int *len_header, int *error)
 {
         if(*len_header > LEN_MAX_HEADER)
@@ -75,6 +150,27 @@ void    test_len_ban    (int *len_header, int *error)
             *error  =   ERROR_LEN_BAN;
         }
 }
+
+/*
+ * <summary>
+ *  void    free_memorie 
+ * </summary>
+ *
+ * <remarks>
+ *  libere la memoire des pointeurs initialises
+ * </remarks>
+ *
+ * <param type="int" name="count">nombre de pointeur</param>
+ * <param type="" name="...">liste des popinteurs</param>
+ *
+ * <subfunction>
+ *  va_list
+ *  va_start
+ *  free
+ *  va_end
+ * </subfunction>
+ *
+ */
 
 void    free_memorie    (int count, ...)
 {

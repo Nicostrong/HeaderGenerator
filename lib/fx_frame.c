@@ -17,11 +17,32 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 05/05/2023 17:00:46                                                                       */
-/*  Updated : 05/05/2023 17:15:10                                                                       */
+/*  Updated : 15/05/2023 15:37:35                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
 #include "libfx.h"
+
+
+/*
+ * <summary>
+ *  void    ft_putline 
+ * </summary>
+ *
+ * <remarks>
+ *  formatage d'une ligne de la frame
+ * </remarks>
+ *
+ * <param type="char" name="strat">caractere de depart</param>
+ * <param type="char" name="middle">caractere du millieu</param>
+ * <param type="char" name="end">caractere de fin</param>
+ * <param type="int" name="longueur">nombre de caractere de la ligne</param>
+ *
+ * <subfunction>
+ *  ft_putchar
+ * </subfunction>
+ *
+ */
 
 void    ft_putline                  (char start, char middle, char end, int longueur)
 {
@@ -39,6 +60,25 @@ void    ft_putline                  (char start, char middle, char end, int long
     
         ft_putchar('\n');
 }
+
+/*
+ * <summary>
+ *  void    frame
+ * </summary>
+ *
+ * <remarks>
+ *  creation de la bordure
+ * </remarks>
+ *
+ * <param type="int" name="length">longueur de la frame</param>
+ * <param type="int" name="height">nombre de ligne de la frame</param>
+ *
+ * <subfunction>
+ *  write
+ *  ft_putline
+ * </subfunction>
+ *
+ */
 
 void    frame                       (int    length, int  height)
 {
