@@ -17,13 +17,26 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 24/04/2023 16:16:47                                                                       */
-/*  Updated : 24/04/2023 17:15:26                                                                       */
+/*  Updated : 15/05/2023 10:34:16                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
 #include "libch.h"
 
-// Fonctions d'affichege des chiffres en ASCII art
+/*
+ * <summary>
+ *  afficher_chiffre_c
+ * </summary>
+ *
+ * <remarks>
+ *  Fonction qui affiche les chiffres en caractere ASCII Art
+ * </remarks>
+ *
+ * <param type="Chiffre_C *" name="chiffre">
+ *  pointeur vers la structure d'un chiffre
+ * </param>
+ *
+ */
 
 void    afficher_chiffre_C      (Chiffre_C      *chiffre)
 {
@@ -33,7 +46,20 @@ void    afficher_chiffre_C      (Chiffre_C      *chiffre)
         }
 }
 
-// Fonctions d'affichege des chiffres en numerique
+/*
+ * <summary>
+ *  afficher_chiffre_N
+ * </summary>
+ *
+ * <remarks>
+ *  Fonction qui affiche les chiffres en caractere numerique
+ * </remarks>
+ *
+ * <param type="Chiffre_N *" name="chiffre">
+ *  pointeur vers la structure d'un chiffre
+ * </param>
+ *
+ */
 
 void    afficher_chiffre_N      (Chiffre_N      *chiffre)
 {
