@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 25/04/2023 13:45:19                                                                       */
-/*  Updated : 05/05/2023 17:29:23                                                                       */
+/*  Updated : 15/05/2023 16:11:06                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -25,6 +25,24 @@
 #include "../lib/libmin.h"
 #include "../lib/libmaj.h"
 #include "../lib/libch.h"
+
+/*
+ * <summary>
+ *  ShowLabelFilename
+ * </summary>
+ *
+ * <remarks>
+ *  Affiche le label et le fichier de destination
+ * </remarks>
+ *
+ * <subfunction>
+ *  printf
+ *  free
+ *  ft_strcpy
+ *  cal_len_line
+ * </subfunction>
+ *
+ */
 
 int     main(int    argc, char  **argv)
 {
@@ -71,3 +89,4 @@ int     main(int    argc, char  **argv)
 
     return (0);
 }
+

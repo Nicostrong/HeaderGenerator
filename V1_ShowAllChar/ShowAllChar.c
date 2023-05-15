@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 11/04/2023 16:46:17                                                                       */
-/*  Updated : 05/05/2023 16:20:25                                                                       */
+/*  Updated : 15/05/2023 16:08:04                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -25,6 +25,26 @@
 #include "../lib/libmin.h"
 #include "../lib/libmaj.h"
 #include "../lib/libch.h"
+
+/*
+ * <summary>
+ *  ShowAllChar
+ * </summary>
+ *
+ * <remarks>
+ *  Affiche l'enssemble des bibliotheques 
+ * </remarks>
+ *
+ * <subfunction>
+ *  afficher_min_C
+ *  afficher_min_A
+ *  afficher_maj_C
+ *  afficher_maj_A
+ *  afficher_min_C  
+ *  afficher_min_C  
+ * </subfunction>
+ *
+ */
 
 int     main()
 {

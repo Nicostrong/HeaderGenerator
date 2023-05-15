@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 25/04/2023 15:02:06                                                                       */
-/*  Updated : 12/05/2023 10:55:02                                                                       */
+/*  Updated : 15/05/2023 16:14:37                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -25,6 +25,37 @@
 #include "../lib/libmin.h"
 #include "../lib/libmaj.h"
 #include "../lib/libch.h"
+
+/*
+ * <summary>
+ *  ShowLabelToASCIIArt
+ * </summary>
+ *
+ * <remarks>
+ *  Affiche le label au format ASCII Art ou Alpha
+ * </remarks>
+ *
+ * <subfunction>
+ *  malloc
+ *  test_memorie
+ *  test_arg
+ *  free_memorie
+ *  ft_strcpy
+ *  cal_len_line
+ *  cal_len_ban
+ *  test_label
+ *  test_len_ban
+ *  aff_label
+ *  aff_nb_char
+ *  aff_len_ban
+ *  aff_style
+ *  aff_outfile
+ *  creat_ban
+ *  aff_ban
+ *  aff_regle
+ * </subfunction>
+ *
+ */
 
 int     main        (int    argc, char  **argv)
 {
