@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 05/05/2023 16:12:25                                                                       */
-/*  Updated : 12/05/2023 17:31:06                                                                       */
+/*  Updated : 16/05/2023 16:32:16                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -121,9 +121,14 @@
  *
  */
 
-    void    ft_putline              (char start, char middle, char end, int longueur);
+    void    aff_frame               (char **ban, int len_ban);
 
-    void    frame                   (int length, int height);
+    void    ft_putstartline         (char start, char middle, char end, int len_frame);
+
+    void    ft_putmiddleline        (char start, char **ban, char end, int len_frame, int len_ban, int ligne);
+
+   // void    frame                   (char **ban, int length, int height);
+
 
 /*
  * <summary>

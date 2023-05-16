@@ -17,26 +17,62 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 05/05/2023 17:00:46                                                                       */
-/*  Updated : 15/05/2023 15:37:35                                                                       */
+/*  Updated : 16/05/2023 16:51:10                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
 #include "libfx.h"
 
-
 /*
  * <summary>
- *  void    ft_putline 
+ *  void    aff_frame
  * </summary>
  *
  * <remarks>
- *  formatage d'une ligne de la frame
+ *  Affichage de la bordure
  * </remarks>
  *
- * <param type="char" name="strat">caractere de depart</param>
+ * <param type="char **" name="ban">tableau constituant la banniere</param>
+ * <param type="int" name="len_ban">longueur de la banniere en caractere</param>
+ *
+ * <subfunction>
+ *  ft_putstartline
+ *  ft_putmiddleline
+ * </subfunction>
+ *
+ */
+
+void    aff_frame                   (char **ban, int len_ban)
+{
+        printf("Voiçi la banniere dans la frame : \n");
+
+        int     len_frame;
+        len_frame       = len_ban + 7;
+
+        ft_putstartline('/', '*', '/', len_frame);
+        
+        for(int ligne = 0; ligne < 12; ligne++)
+        {
+            ft_putmiddleline('/', ban, '/', len_frame, len_ban, ligne);
+        }
+        
+        ft_putstartline('/', '*', '/', len_frame);
+}
+
+/*
+ * <summary>
+ *  void    ft_putstartline 
+ * </summary>
+ *
+ * <remarks>
+ *  formatage de la premiere ligne de la frame
+ *  identique a la derniere ligne
+ * </remarks>
+ *
+ * <param type="char" name="start">caractere de depart</param>
  * <param type="char" name="middle">caractere du millieu</param>
  * <param type="char" name="end">caractere de fin</param>
- * <param type="int" name="longueur">nombre de caractere de la ligne</param>
+ * <param type="int" name="len">nombre de caractere de la ligne</param>
  *
  * <subfunction>
  *  ft_putchar
@@ -44,18 +80,18 @@
  *
  */
 
-void    ft_putline                  (char start, char middle, char end, int longueur)
+void    ft_putstartline             (char start, char middle, char end, int len)
 {
         ft_putchar(start);
-        longueur--;
-
-        while(longueur > 1)
+        len--;
+        
+        while(len > 1)
         {
             ft_putchar(middle);
-            longueur--;
+            len--;
         }
         
-        if(longueur == 1)
+        if(len == 1)
             ft_putchar(end);
     
         ft_putchar('\n');
@@ -63,38 +99,60 @@ void    ft_putline                  (char start, char middle, char end, int long
 
 /*
  * <summary>
- *  void    frame
+ *  void    ft_putmiddleline
  * </summary>
  *
  * <remarks>
- *  creation de la bordure
+ *  formatage de la trame centrale de la banniere dans la frame
  * </remarks>
  *
- * <param type="int" name="length">longueur de la frame</param>
- * <param type="int" name="height">nombre de ligne de la frame</param>
+ * <param type="char" name="start">caractere de depart</param>
+ * <param type="char **" name="ban">tableau de caractere de la banniere</param>
+ * <param type="char" name="end">caractere de fin</param>
+ * <param type="int" name="len_frame">nombre de caractere de la ligne</param>
+ * <param type="int" name="len_ban">nombre de caractere de la banniere</param>
+ * <param type="int" name="ligne">numero de la ligne</param>
  *
  * <subfunction>
- *  write
- *  ft_putline
+ *  ft_putchar
  * </subfunction>
  *
  */
 
-void    frame                       (int    length, int  height)
+void    ft_putmiddleline        (char start, char **ban, char end, int len_frame, int len_ban, int ligne)
 {
-        char    start = 'O';
-        char    middle = '-';
-        char    hauteur = '|';
-        char    mid_haut = ' ';
+        ft_putchar(start);
+        len_frame--;
+        ft_putchar('*');
+        len_frame--;
+        ft_putchar(' ');
+        len_frame--;
+        ft_putchar(' ');
+        len_frame--;
 
-        if(length < 1 || height < 1)
+        for(int i = 0; i < len_ban; i++)
         {
-            char    error[] = "Veuillez entrer des parametres x et y plus grand que '0'!!!\n";
-            write(1, error, 62);
-            return;
+            ft_putchar(ban[ligne][i]);
+            len_frame--;
         }
 
-        ft_putline(start, middle, start, length);
+        if(len_frame == 3)
+        {
+            ft_putchar(' ');
+            ft_putchar('*');
+            ft_putchar(end);
+            ft_putchar('\n');
+        }
+}
+/*
+void    frame                       (char **ban, int length, int height)
+{
+        char    start = '/';
+        char    middle = '*';
+        char    hauteur = '*';
+        char    mid_haut = ' ';
+
+        ft_putline(start, middle, start, lenght);
         height--;
 
         while(height > 1)
@@ -106,4 +164,4 @@ void    frame                       (int    length, int  height)
         if (height == 1)
             ft_putline(start, middle, start, length);
 }
-
+*/

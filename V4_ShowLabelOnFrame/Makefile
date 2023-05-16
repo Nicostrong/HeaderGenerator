@@ -17,7 +17,7 @@
 #*  By: Nicostrong <nicostrong@msn.com>                                                                 *#
 #*                                                                                                      *#
 #*  Created : 25/04/2023 09:53:03                                                                       *#
-#*  Updated : 05/05/2023 17:31:43                                                                       *#
+#*  Updated : 16/05/2023 12:25:27                                                                       *#
 #*                                                                                                      *#
 #* **************************************************************************************************** *#
 
@@ -27,7 +27,7 @@ NAME_DEBUG = prog_debug
 
 SRC = ShowLabelOnFrame.c
 
-LIB = -Llib -lmin -lmaj -lch -lfx
+LIB = -L../lib -lmin -lmaj -lch -lfx
 
 FLAGW = -W -Wall -Werror
 
