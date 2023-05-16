@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 05/05/2023 16:03:29                                                                       */
-/*  Updated : 16/05/2023 16:51:09                                                                       */
+/*  Updated : 16/05/2023 16:55:18                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -124,7 +124,6 @@ int     main        (int    argc, char  **argv)
 
         aff_ban     (ban, *len_header);
         // aff_regle   (*len_header);
-
         aff_frame   (ban, *len_header);
 
         for(int i = 0; i < 12; i++)
