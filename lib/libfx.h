@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 05/05/2023 16:12:25                                                                       */
-/*  Updated : 16/05/2023 16:32:16                                                                       */
+/*  Updated : 10/07/2023 15:09:46                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -157,6 +157,21 @@
     void    test_len_ban            (int *len_header, int *error);
 
     void    free_memorie            (int count, ...);
+
+/*
+ * <summary>
+ *  Fonctions de fx_caplong.c
+ * </summary>
+ *
+ * <remarks>
+ *  fonctions pour prolonger cartains caracteres en majuscule
+ * </remarks>
+ *
+ */
+
+    bool    find_arobase            (char letter, int line, int len_header, char **ban, char *charleft, char *charright, int *pos_arobase);
+
+    void    prolonge_arobase        (int line, int pos_arobase, char charleft, char charrigh, int len_header, char **ban);
 
 #endif
 

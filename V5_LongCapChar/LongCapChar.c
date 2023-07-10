@@ -12,14 +12,15 @@
 /*                                                                                                ###   */
 /*  ################################################################################################    */
 /*                                                                                                      */
-/*  File: ShowLabelOnFrame.c                                                                            */
+/*  File: LongCapChar.c                                                                                 */
 /*                                                                                                      */
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
-/*  Created : 05/05/2023 16:03:29                                                                       */
-/*  Updated : 08/06/2023 14:40:30                                                                       */
+/*  Created : 02/06/2023 11:20:58                                                                       */
+/*  Updated : 10/07/2023 16:42:55                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
+
 
 #include "../lib/libfx.h"
 #include "../lib/libmin.h"
@@ -28,11 +29,11 @@
 
 /*
  * <summary>
- *  ShowLabelOnFrame
+ *  LongCapChar
  * </summary>
  *
  * <remarks>
- *  Affiche le label dans un cadre
+ *  Prolongation du caractere post ou pre '@'
  * </remarks>
  *
  * <subfunction>
@@ -63,21 +64,27 @@ int     main        (int    argc, char  **argv)
         char    *label              =   malloc(sizeof(char) *   50);
         char    *filename           =   malloc(sizeof(char) *   50);
         char    *style              =   malloc(sizeof(char));
+        char    *charleft           =   malloc(sizeof(char));
+        char    *charright          =   malloc(sizeof(char));
         int     *len_header         =   malloc(sizeof(int));
+        int     *pos_arrobase       =   malloc(sizeof(int));
         int     *error              =   malloc(sizeof(int));
         int     len_label;
 
         test_memorie    ((void  *)  label, "label", error);
         test_memorie    ((void  *)  filename, "filename", error);
         test_memorie    ((void  *)  style, "Style d'écriture", error);
+        test_memorie    ((void  *)  charleft, "Caractere a gauche de '@'", error);
+        test_memorie    ((void  *)  charright, "Caractere a droite de '@'", error);
         test_memorie    ((void  *)  len_header, "longueur header", error);
+        test_memorie    ((void  *)  pos_arrobase, "position de '@'", error);
 
         // Traitement des arguments
 
         test_arg(argc, argv, error);
         if((*error == ERROR_NB_ARG) || (*error == ERROR_ARG_2))
         {
-            free_memorie    (5,label, filename, style, len_header, error);
+            free_memorie    (8, label, filename, style, charleft, charright, len_header, pos_arrobase, error);
             return (1);
         }
         else
@@ -93,14 +100,14 @@ int     main        (int    argc, char  **argv)
         test_label(label, error);
         if(*error == ERROR_CHAR_LABEL)
         {
-            free_memorie    (5,label, filename, style, len_header, error);
+            free_memorie    (8, label, filename, style, charleft, charright, len_header, pos_arrobase, error);
             return (1);
         }
-        
+
         test_len_ban(len_header, error);
         if(*error == ERROR_LEN_BAN)
         {
-            free_memorie    (5,label, filename, style, len_header, error);
+            free_memorie    (8, label, filename, style, charleft, charright, len_header, pos_arrobase, error);
             return (1);
         }
 
@@ -122,14 +129,30 @@ int     main        (int    argc, char  **argv)
 
         creat_ban   (label, &ban[0], style, len_label, error);
 
-        aff_ban     (ban, *len_header);
-        // aff_regle   (*len_header);
-        aff_frame   (ban, *len_header);
+        if(find_arobase('@', 0, *len_header, ban, charleft, charright, pos_arrobase))
+        {
+            printf("Position de '@' sur la ligne 0 : %d\n", *pos_arrobase);
+            printf("Caractere a gauche de '@': %c\n", *charleft);
+            printf("Caractere a droite de '@': %c\n", *charright);
+            printf("**************\n");
+            prolonge_arobase(0, *pos_arrobase, *charleft, *charright, *len_header, ban);
+        }
+        if(find_arobase('@', 11, *len_header, ban, charleft, charright, pos_arrobase))
+        {
+            printf("Position de '@' sur la ligne 11 : %d\n", *pos_arrobase);
+            printf("Caractere a gauche de '@': %c\n", *charleft);
+            printf("Caractere a droite de '@': %c\n", *charright);
+            printf("**************\n");
+            prolonge_arobase(11, *pos_arrobase, *charleft, *charright, *len_header, ban);
+        }
 
+        aff_ban     (ban, *len_header);
+        // aff_frame   (ban, *len_header);
+       
         for(int i = 0; i < 12; i++)
            free (ban[i]);
     
-        free_memorie    (6,label, filename, style, len_header, error, ban);
+        free_memorie    (9, label, filename, style, charleft, charright, len_header, pos_arrobase, error, ban);
 
         return (0);
 }

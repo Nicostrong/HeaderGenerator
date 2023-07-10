@@ -17,7 +17,7 @@
 !*  By: Nicostrong <nicostrong@msn.com>                                                                 *!
 !*                                                                                                      *!
 !*  Created : 02/05/2023 15:48:36                                                                       *!
-!*  Updated : 12/05/2023 15:59:30                                                                       *!
+!*  Updated : 19/06/2023 11:45:08                                                                       *!
 !*                                                                                                      *!
 !* **************************************************************************************************** *!
 
@@ -71,4 +71,32 @@ V4  :   "ShowLabelOnFrame"
     de type .c
 
 
+V5  :   "LongCapChar"
+
+    Certaine lettre capitale ont un '@'.
+
+    Cet '@' est une indication pour indiquer le prolongement du caractere precedent jusqu'a la fin du label.
+    Ou s'il est place avant un caractere, ce dernier devra etre prolonge vers le debut du label.
+
+V6  :   "DefineLenghtBan"
+
+    Pour cette version, nous allons rajouter un paramettre prefixe par '-L' puis suivi par une longueur
+    de caractere.
+
+    '-L80' definira une banniere d'une longueur de 80 caracteres.
+
+    Cette option peut etre tres utile si nous souhaitons un label qui prend peu de caracteres mais que
+    nous souhaitons une banniere qui prenne une largeur defini.
+
+V7  :   "PositionLabel"
+
+    Mettons en forme notre banniere.
+
+    Nous allons ajouter un paramettre qui definira l'allignement de notre label dans la banniere.
+
+    Pour ce faire nous allons creer le paramettre '-P' suivi d'une lettre :
+
+    '-Pl'   =>  positionnement du label à gauche.
+    '-Pm'   =>  positionnement du label au centre.
+    '-Pr'   =>  positionnement du label à droite.
 

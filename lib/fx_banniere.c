@@ -36,7 +36,7 @@
  *
  */
 
-const   int LEN_MAX_HEADER  =   120;
+ const   int LEN_MAX_HEADER  =   120;
 
 /*
  * <summary>
