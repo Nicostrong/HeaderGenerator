@@ -12,12 +12,12 @@
 /*                                                                                                ###   */
 /*  ################################################################################################    */
 /*                                                                                                      */
-/*  File: LongCapChar.c                                                                                 */
+/*  File: DefineLenghtBan.c                                                                             */
 /*                                                                                                      */
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
-/*  Created : 02/06/2023 11:20:58                                                                       */
-/*  Updated : 11/07/2023 10:21:19                                                                       */
+/*  Created : 11/07/2023 10:19:33                                                                       */
+/*  Updated : 11/07/2023 14:46:08                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -28,11 +28,11 @@
 
 /*
  * <summary>
- *  LongCapChar
+ *  DefineLenghtBan
  * </summary>
  *
  * <remarks>
- *  Prolongation du caractere post ou pre '@'
+ *  Definition d'une longueur de banniere 
  * </remarks>
  *
  * <subfunction>
@@ -63,8 +63,10 @@
 int     main        (int    argc, char  **argv)
 {
         char    *label              =   malloc(sizeof(char) *   50);
-        char    *filename           =   malloc(sizeof(char) *   50);
         char    *style              =   malloc(sizeof(char));
+        char    *def_len_ban        =   malloc(sizeof(int));
+        char    *justify            =   malloc(sizeof(char) *   3);
+        char    *filename           =   malloc(sizeof(char) *   50);
         char    *charleft           =   malloc(sizeof(char));
         char    *charright          =   malloc(sizeof(char));
         int     *len_header         =   malloc(sizeof(int));
@@ -72,20 +74,23 @@ int     main        (int    argc, char  **argv)
         int     *error              =   malloc(sizeof(int));
         int     len_label;
 
-        test_memorie    ((void  *)  label, "label", error);
-        test_memorie    ((void  *)  filename, "filename", error);
+        test_memorie    ((void  *)  label, "Label", error);
         test_memorie    ((void  *)  style, "Style d'écriture", error);
+        test_memorie    ((void  *)  def_len_ban, "Longueur de la banniere", error);
+        test_memorie    ((void  *)  justify, "Type de justification", error);
+        test_memorie    ((void  *)  filename, "Filename", error);
         test_memorie    ((void  *)  charleft, "Caractere a gauche de '@'", error);
         test_memorie    ((void  *)  charright, "Caractere a droite de '@'", error);
-        test_memorie    ((void  *)  len_header, "longueur header", error);
-        test_memorie    ((void  *)  pos_arrobase, "position de '@'", error);
+        test_memorie    ((void  *)  len_header, "Longueur header", error);
+        test_memorie    ((void  *)  pos_arrobase, "Position de '@'", error);
+        test_memorie    ((void  *)  error, "Code erreur", error);
 
         // Traitement des arguments
 
         test_arg(argc, argv, error);
-        if((*error == ERROR_NB_ARG) || (*error == ERROR_ARG_2))
+        if((*error == ERROR_HELP) || (*error == ERROR_NB_ARG) || (*error == ERROR_ARG_2))
         {
-            free_memorie    (8, label, filename, style, charleft, charright, len_header, pos_arrobase, error);
+            free_memorie    (10, label, style, def_len_ban, justify, filename, charleft, charright, len_header, pos_arrobase, error);
             return (1);
         }
         else

@@ -17,7 +17,7 @@
 !*  By: Nicostrong <nicostrong@msn.com>                                                                 *!
 !*                                                                                                      *!
 !*  Created : 02/05/2023 15:48:36                                                                       *!
-!*  Updated : 19/06/2023 11:45:08                                                                       *!
+!*  Updated : 11/07/2023 16:27:55                                                                       *!
 !*                                                                                                      *!
 !* **************************************************************************************************** *!
 
@@ -27,6 +27,10 @@
         Vous pourrez observer l'evolution du code a travers ces differentes etapes.
 
         Au final, j'espere obtenir un programme fonctionnel sans bug et correctement code.
+
+        Synopsys :
+
+        ./HeaderGenerator "label" -c|-a -L80|-L120 -Pl|-Pm|-Pr "filename.ext"
 
 V1  :   "ShowAllChar"
 
@@ -83,10 +87,11 @@ V6  :   "DefineLenghtBan"
     Pour cette version, nous allons rajouter un paramettre prefixe par '-L' puis suivi par une longueur
     de caractere.
 
-    '-L80' definira une banniere d'une longueur de 80 caracteres.
+    '-L80'      =>  definira une banniere d'une longueur de 80 caracteres.
+    '-L120'     =>  definira une banniere d'une longueur de 120 caracteres.
 
     Cette option peut etre tres utile si nous souhaitons un label qui prend peu de caracteres mais que
-    nous souhaitons une banniere qui prenne une largeur defini.
+    nous souhaitons une banniere qui prenne une largeur predefini.
 
 V7  :   "PositionLabel"
 

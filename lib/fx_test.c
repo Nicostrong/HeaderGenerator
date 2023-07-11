@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 09/05/2023 09:53:08                                                                       */
-/*  Updated : 15/05/2023 15:37:40                                                                       */
+/*  Updated : 11/07/2023 16:27:27                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -109,10 +109,16 @@ void    test_label      (char *label, int *error)
 
 void    test_arg        (int argc, char **argv, int *error)
 {
-        if(argc < 4)
+        if(ft_strcmp(argv[1], "-help"))
+        {
+            help();
+            *error  =   ERROR_HELP;
+        }
+        else if(argc < 4)
         {
             printf("ERROR : ERROR_NB_ARG\n");
-            printf("Usage : %s <label> || \"la bel\" <style = '-c' for ASCII Art or '-a' for Alphabetic> <filename>\n", argv[0]);
+            printf("Usage minimum : %s <label> || \"la bel\" <style = '-c' for ASCII Art or '-a' for Alphabetic> <filename>\n", argv[0]);
+            printf("Help usage : %s -help\n", argv[0]);
             *error  =   ERROR_NB_ARG;
         }
         else if(!ft_strcmp(argv[2],"-c") && !ft_strcmp(argv[2], "-a"))

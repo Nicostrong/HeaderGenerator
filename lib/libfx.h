@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 05/05/2023 16:12:25                                                                       */
-/*  Updated : 10/07/2023 15:09:46                                                                       */
+/*  Updated : 11/07/2023 16:27:28                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -33,6 +33,7 @@
 #include "libmin.h"
 #include "libmaj.h"
 #include "libch.h"
+#include "libhelp.h"
 
 /*
  * <summary>
@@ -147,6 +148,7 @@
     #define ERROR_NB_ARG        -3
     #define ERROR_ARG_2         -4
     #define ERROR_LEN_BAN       -5
+    #define ERROR_HELP          -6
 
     void    test_memorie            (void *var, char *var_name, int *error);
 
