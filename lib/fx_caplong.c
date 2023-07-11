@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 13/06/2023 12:29:44                                                                       */
-/*  Updated : 10/07/2023 16:42:02                                                                       */
+/*  Updated : 11/07/2023 10:11:06                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -99,15 +99,13 @@ void    prolonge_arobase    (int line, int pos_arobase, char charleft, char char
 {
     if(charleft != '0')
     {
-        printf("Etirement vers la droite\n");
         for(int i = pos_arobase; i <= len_header; i++)
             ban[line][i] = charleft;
 
     }
     else
     {
-        printf("Etirement vers la gauche.\n");
-        for(int i = pos_arobase; i == 0; i--)
+        for(int i = pos_arobase; i >= 0; i--)
             ban[line][i] = charright;
     }
 }

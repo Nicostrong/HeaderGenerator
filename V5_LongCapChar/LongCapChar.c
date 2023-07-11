@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 02/06/2023 11:20:58                                                                       */
-/*  Updated : 10/07/2023 16:42:55                                                                       */
+/*  Updated : 11/07/2023 10:11:52                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -129,7 +129,7 @@ int     main        (int    argc, char  **argv)
 
         creat_ban   (label, &ban[0], style, len_label, error);
 
-        if(find_arobase('@', 0, *len_header, ban, charleft, charright, pos_arrobase))
+        while(find_arobase('@', 0, *len_header, ban, charleft, charright, pos_arrobase))
         {
             printf("Position de '@' sur la ligne 0 : %d\n", *pos_arrobase);
             printf("Caractere a gauche de '@': %c\n", *charleft);
@@ -137,7 +137,7 @@ int     main        (int    argc, char  **argv)
             printf("**************\n");
             prolonge_arobase(0, *pos_arrobase, *charleft, *charright, *len_header, ban);
         }
-        if(find_arobase('@', 11, *len_header, ban, charleft, charright, pos_arrobase))
+        while(find_arobase('@', 11, *len_header, ban, charleft, charright, pos_arrobase))
         {
             printf("Position de '@' sur la ligne 11 : %d\n", *pos_arrobase);
             printf("Caractere a gauche de '@': %c\n", *charleft);
@@ -147,7 +147,7 @@ int     main        (int    argc, char  **argv)
         }
 
         aff_ban     (ban, *len_header);
-        // aff_frame   (ban, *len_header);
+        aff_frame   (ban, *len_header);
        
         for(int i = 0; i < 12; i++)
            free (ban[i]);
