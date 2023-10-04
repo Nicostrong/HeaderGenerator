@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 11/07/2023 10:19:33                                                                       */
-/*  Updated : 11/07/2023 14:46:08                                                                       */
+/*  Updated : 21/07/2023 16:18:29                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -95,9 +95,12 @@ int     main        (int    argc, char  **argv)
         }
         else
         {
+            ft_copyargs(argv, argc, style, def_len_ban, justify, filename);
+            /*
             ft_strcpy   (label, argv[1]);
             ft_strcpy   (style, argv[2]);
             ft_strcpy   (filename, argv[3]);
+            */
         }
 
         len_label   =   cal_len_line    (label);

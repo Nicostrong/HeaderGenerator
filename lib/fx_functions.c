@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 05/05/2023 17:01:50                                                                       */
-/*  Updated : 15/05/2023 16:00:49                                                                       */
+/*  Updated : 21/07/2023 16:29:15                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -100,6 +100,45 @@ void    ft_strcpy       (char *dest, char *src)
             dest[i]     =   src[i];
             i++;
         }
+}
+
+/*
+ * <summary>
+ *  void    ft_copyargs
+ * </summary>
+ *
+ * <remarks>
+ *  Copie les arguments dans les bonnes variables
+ * </remarks>
+ *
+ * <param type="char *" name="dest">adresse de destination</param>
+ * <param type="char *" name="src">adresse source a copier</param>
+ *
+ */
+
+void    ft_copyargs     (char **argv, int argc, ...)
+{
+        va_list args;
+        va_start(args, argc);
+
+        for(int i = 2; i < argc; i++)
+        {
+            switch(argv[i][1])
+            {
+                case 'c':
+                case 'a':
+                    ft_strcpy((va_args, void *), argv[i]);
+                    break;
+                case 'L':
+                    ft_strcpy((va_args, void *), argc[i]);
+                    break;
+                case 'P':
+                    ft_strcpy((va_args, void *), argv[i]);
+                    break;
+            }
+        }
+
+        va_end(args);
 }
 
 /*

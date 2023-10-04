@@ -17,7 +17,7 @@
 /*  By: Nicostrong <nicostrong@msn.com>                                                                 */
 /*                                                                                                      */
 /*  Created : 05/05/2023 16:12:25                                                                       */
-/*  Updated : 11/07/2023 16:27:28                                                                       */
+/*  Updated : 21/07/2023 16:29:12                                                                       */
 /*                                                                                                      */
 /* **************************************************************************************************** */
 
@@ -51,6 +51,8 @@
     void    ft_putstr               (char *str);
 
     void    ft_strcpy               (char *dest, char *scr);
+
+    void    ft_copyargs             (char **argv, int argc, ...);
 
     bool    ft_strcmp               (char *str1, char *str2);
 
